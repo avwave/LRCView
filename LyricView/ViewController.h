@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LyricParser.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <LyricParserDelegate>{
+	IBOutlet UILabel *lyricField;
+	LyricParser *lyricParser;
+	
+	AVAudioPlayer *audioPlayer;
+}
+
+-(IBAction)startPlaying:(id)sender;
 
 @end

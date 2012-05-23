@@ -9,15 +9,30 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+-(void)readFile;
 @end
 
 @implementation ViewController
 
+-(void)displayStringIntoLabel:(NSString *)component {
+	NSLog(@"%@", component);
+	[lyricField setText:component];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/08881_Save Tonight_Eagle-Eye Cherry.mp3", [[NSBundle mainBundle] resourcePath]]];
+	
+	NSError *error;
+	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	audioPlayer.numberOfLoops = -1;
+	
+	if (audioPlayer != nil) {
+		[audioPlayer prepareToPlay];
+		[self readFile];
+	}
 }
 
 - (void)viewDidUnload
@@ -29,6 +44,21 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+-(void)readFile {
+	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"08881_Save Tonight_Eagle-Eye Cherry" ofType:@"lrc"];
+	NSError *error;
+	NSString *content = [[NSString alloc] initWithContentsOfFile:fileName
+													usedEncoding:nil
+														   error:&error];
+	lyricParser = [[LyricParser alloc] initWithLyrics:content];
+	[lyricParser setDelegate:self];
+}
+
+-(void)startPlaying:(id)sender {
+	[lyricParser startLyricEngineFromTime:0.0f];
+	[audioPlayer play];
 }
 
 @end
