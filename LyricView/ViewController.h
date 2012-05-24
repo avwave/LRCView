@@ -12,7 +12,7 @@
 
 @interface ViewController : UIViewController <LyricParserDelegate>{
 	IBOutlet UILabel *lyricField;
-	LyricParser *lyricParser;
+	IBOutlet LyricParser *lyricParser;
 	
 	AVAudioPlayer *audioPlayer;
 }

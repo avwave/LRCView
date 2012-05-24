@@ -22,6 +22,7 @@
 		20FB3CEB1567EFA500F4AC61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3CEA1567EFA500F4AC61 /* ViewController.m */; };
 		20FB3CEE1567EFA600F4AC61 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FB3CEC1567EFA600F4AC61 /* ViewController.xib */; };
 		20FB3CF51567F12B00F4AC61 /* 05421_Wonderwall_Oasis.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20FB3CF41567F12B00F4AC61 /* 05421_Wonderwall_Oasis.lrc */; };
+		2125F9A7156DF4060072BC46 /* Save Tonight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2125F9A6156DF4060072BC46 /* Save Tonight.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		20FB3CEA1567EFA500F4AC61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		20FB3CED1567EFA600F4AC61 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		20FB3CF41567F12B00F4AC61 /* 05421_Wonderwall_Oasis.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 05421_Wonderwall_Oasis.lrc; sourceTree = "<group>"; };
+		2125F9A6156DF4060072BC46 /* Save Tonight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Save Tonight.mp3"; path = "../../../Music/iTunes/iTunes Media/Music/Eagle Eye Cherry/Unknown Album/Save Tonight.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				208166111568C4F800D288D7 /* LyricParser.h */,
 				208166121568C4F800D288D7 /* LyricParser.m */,
 				20F9A5B9156D3A2200ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.mp3 */,
+				2125F9A6156DF4060072BC46 /* Save Tonight.mp3 */,
 				20F9A5BF156D456000ED44D7 /* 05421_Wonderwall_Oasis.mp3 */,
 			);
 			path = LyricView;
@@ -180,6 +183,7 @@
 				20F9A5B8156D3A1A00ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.lrc in Resources */,
 				20F9A5BA156D3A2200ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.mp3 in Resources */,
 				20F9A5C0156D456000ED44D7 /* 05421_Wonderwall_Oasis.mp3 in Resources */,
+				2125F9A7156DF4060072BC46 /* Save Tonight.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

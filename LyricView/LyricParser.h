@@ -8,26 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol LyricParserDelegate <NSObject>
+@protocol LyricParserDelegate
 @required
 -(void)displayStringIntoLabel :(NSString *)component;
-
 @end
 
-@interface LyricParser : NSObject {
+@interface LyricParser : UIView {
 	NSString *lyrics;
 	NSMutableArray *lineTimes;
 	NSMutableArray *lineContents;
 	
 	NSMutableArray *wordTimes;
 	NSMutableArray *wordContents;
-	id <LyricParserDelegate> delegate;
+	NSString *currentWord;
+	NSString *currentLine;
 }
-@property (retain) id delegate;
+@property (assign) id <LyricParserDelegate> delegate;
 
--(id)initWithLyrics:(NSString *)l;
+-(void)redraw;
+-(void)setLyrics:(NSString *)l;
 -(void)parseLyrics;
 -(NSString *)nextLine;
 -(void)timerComplete;
 -(void)startLyricEngineFromTime:(float)timeInSeconds;
+-(void)startLineEngine;
 @end

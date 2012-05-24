@@ -23,11 +23,11 @@
 {
     [super viewDidLoad];
 
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/08881_Save Tonight_Eagle-Eye Cherry.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Save Tonight.mp3", [[NSBundle mainBundle] resourcePath]]];
 	
 	NSError *error;
 	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-	audioPlayer.numberOfLoops = -1;
+	audioPlayer.numberOfLoops = 1;
 	
 	if (audioPlayer != nil) {
 		[audioPlayer prepareToPlay];
@@ -52,12 +52,13 @@
 	NSString *content = [[NSString alloc] initWithContentsOfFile:fileName
 													usedEncoding:nil
 														   error:&error];
-	lyricParser = [[LyricParser alloc] initWithLyrics:content];
 	[lyricParser setDelegate:self];
+	[lyricParser setLyrics:content];
 }
 
 -(void)startPlaying:(id)sender {
 	[lyricParser startLyricEngineFromTime:0.0f];
+	[lyricParser startLineEngine];
 	[audioPlayer play];
 }
 
