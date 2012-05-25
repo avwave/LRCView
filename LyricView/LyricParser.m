@@ -158,6 +158,7 @@
 			[self performSelector:@selector(timerComplete:) withObject:[lineContents objectAtIndex:i] afterDelay:[[lineTimes objectAtIndex:i] floatValue] - timeInSeconds];
 		}
 	}
+	[self.delegate playAudio];
 }
 
 //-(void)startLineEngine {

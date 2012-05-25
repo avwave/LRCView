@@ -20,6 +20,7 @@
 		20FB3CEB1567EFA500F4AC61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3CEA1567EFA500F4AC61 /* ViewController.m */; };
 		20FB3CEE1567EFA600F4AC61 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FB3CEC1567EFA600F4AC61 /* ViewController.xib */; };
 		2125F9A7156DF4060072BC46 /* Save Tonight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2125F9A6156DF4060072BC46 /* Save Tonight.mp3 */; };
+		21CA51F2156FA01000EA16A9 /* onsec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21CA51F1156FA01000EA16A9 /* onsec.mp3 */; };
 		21EC2089156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21EC2087156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 */; };
 		21EC208A156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 21EC2088156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		20FB3CEA1567EFA500F4AC61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		20FB3CED1567EFA600F4AC61 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		2125F9A6156DF4060072BC46 /* Save Tonight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Save Tonight.mp3"; path = "../../../Music/iTunes/iTunes Media/Music/Eagle Eye Cherry/Unknown Album/Save Tonight.mp3"; sourceTree = "<group>"; };
+		21CA51F1156FA01000EA16A9 /* onsec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = onsec.mp3; sourceTree = "<group>"; };
 		21EC2087156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 05421_Wonderwall_Oasis.mp3; sourceTree = "<group>"; };
 		21EC2088156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 05421_Wonderwall_Oasis.lrc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 		20FB3CDD1567EFA500F4AC61 /* LyricView */ = {
 			isa = PBXGroup;
 			children = (
+				21CA51F1156FA01000EA16A9 /* onsec.mp3 */,
 				20FB3CE61567EFA500F4AC61 /* AppDelegate.h */,
 				20FB3CE71567EFA500F4AC61 /* AppDelegate.m */,
 				20FB3CE91567EFA500F4AC61 /* ViewController.h */,
@@ -180,6 +183,7 @@
 				2125F9A7156DF4060072BC46 /* Save Tonight.mp3 in Resources */,
 				21EC2089156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 in Resources */,
 				21EC208A156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc in Resources */,
+				21CA51F2156FA01000EA16A9 /* onsec.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

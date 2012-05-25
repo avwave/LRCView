@@ -15,11 +15,11 @@
 	IBOutlet LyricParser *lyricParser;
 	IBOutlet UILabel *timeField;
 
-	AVAudioPlayer *audioPlayer;
 	NSDateFormatter *timeFormatter;	
 	IBOutlet UISlider *slider;
 }
 
+@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 -(IBAction)startPlaying:(id)sender;
 -(IBAction)scrub:(id)sender;
 

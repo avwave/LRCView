@@ -11,6 +11,7 @@
 @protocol LyricParserDelegate
 @required
 -(void)displayStringIntoLabel :(NSString *)component;
+-(void)playAudio;
 @end
 
 @interface LyricParser : UIView {

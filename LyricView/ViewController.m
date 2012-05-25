@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+@synthesize audioPlayer;
 
 -(void)displayStringIntoLabel:(NSString *)component {
 	NSLog(@"%@", component);
@@ -22,16 +23,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	NSError* error = nil;
+	NSString* soundfilePath = [[NSBundle mainBundle] pathForResource:@"onsec" ofType:@"mp3"];
+	NSURL* soundfileURL = [NSURL fileURLWithPath:soundfilePath];
+	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundfileURL error:&error];
+	[self.audioPlayer play];  
+	
 
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/05421_Wonderwall_Oasis.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Save Tonight" ofType:@"mp3"]];
 	
-	NSError *error;
-	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
 	
-	if (audioPlayer != nil) {
-		[audioPlayer prepareToPlay];
-		[slider setMaximumValue:[audioPlayer duration]];
+	if (self.audioPlayer != nil) {
+		[slider setMaximumValue:[self.audioPlayer duration]];
 		[self readFile];
+		[self.audioPlayer prepareToPlay];
+
 	}
 }
 
@@ -47,7 +55,7 @@
 }
 
 -(void)readFile {
-	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"05421_Wonderwall_Oasis" ofType:@"lrc"];
+	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"08881_Save Tonight_Eagle-Eye Cherry" ofType:@"lrc"];
 	NSError *error;
 	NSString *content = [[NSString alloc] initWithContentsOfFile:fileName
 													usedEncoding:nil
@@ -57,11 +65,14 @@
 }
 
 -(void)startPlaying:(id)sender {
+	if ([self.audioPlayer isPlaying]) {
+		[self.audioPlayer stop];
+	}
 	[lyricParser startLyricEngineFromTime:[slider value]];
-	NSTimeInterval now = audioPlayer.deviceCurrentTime;
+	NSTimeInterval now = self.audioPlayer.deviceCurrentTime;
 	
-	[audioPlayer setCurrentTime:[slider value]];
-	[audioPlayer play];
+	[self.audioPlayer setCurrentTime:[slider value]];
+	[self.audioPlayer play];
 }
 
 - (NSString *)convertTimeFromSeconds:(float)seconds {
