@@ -10,9 +10,7 @@
 		208166131568C4F800D288D7 /* LyricParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 208166121568C4F800D288D7 /* LyricParser.m */; };
 		20F9A5B5156D363200ED44D7 /* NSMutableArray+Reverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */; };
 		20F9A5B8156D3A1A00ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20F9A5B7156D3A1A00ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.lrc */; };
-		20F9A5BA156D3A2200ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20F9A5B9156D3A2200ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.mp3 */; };
 		20F9A5BE156D3BAB00ED44D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9A5BC156D3BAB00ED44D7 /* AVFoundation.framework */; };
-		20F9A5C0156D456000ED44D7 /* 05421_Wonderwall_Oasis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20F9A5BF156D456000ED44D7 /* 05421_Wonderwall_Oasis.mp3 */; };
 		20FB3CD81567EFA500F4AC61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FB3CD71567EFA500F4AC61 /* UIKit.framework */; };
 		20FB3CDA1567EFA500F4AC61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FB3CD91567EFA500F4AC61 /* Foundation.framework */; };
 		20FB3CDC1567EFA500F4AC61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FB3CDB1567EFA500F4AC61 /* CoreGraphics.framework */; };
@@ -21,8 +19,9 @@
 		20FB3CE81567EFA500F4AC61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3CE71567EFA500F4AC61 /* AppDelegate.m */; };
 		20FB3CEB1567EFA500F4AC61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3CEA1567EFA500F4AC61 /* ViewController.m */; };
 		20FB3CEE1567EFA600F4AC61 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FB3CEC1567EFA600F4AC61 /* ViewController.xib */; };
-		20FB3CF51567F12B00F4AC61 /* 05421_Wonderwall_Oasis.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20FB3CF41567F12B00F4AC61 /* 05421_Wonderwall_Oasis.lrc */; };
 		2125F9A7156DF4060072BC46 /* Save Tonight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2125F9A6156DF4060072BC46 /* Save Tonight.mp3 */; };
+		21EC2089156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21EC2087156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 */; };
+		21EC208A156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 21EC2088156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +30,7 @@
 		20F9A5B3156D363200ED44D7 /* NSMutableArray+Reverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Reverse.h"; sourceTree = "<group>"; };
 		20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Reverse.m"; sourceTree = "<group>"; };
 		20F9A5B7156D3A1A00ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "08881_Save Tonight_Eagle-Eye Cherry.lrc"; sourceTree = "<group>"; };
-		20F9A5B9156D3A2200ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "08881_Save Tonight_Eagle-Eye Cherry.mp3"; sourceTree = "<group>"; };
 		20F9A5BC156D3BAB00ED44D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		20F9A5BF156D456000ED44D7 /* 05421_Wonderwall_Oasis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 05421_Wonderwall_Oasis.mp3; sourceTree = "<group>"; };
 		20FB3CD31567EFA500F4AC61 /* LyricView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FB3CD71567EFA500F4AC61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20FB3CD91567EFA500F4AC61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,8 +44,9 @@
 		20FB3CE91567EFA500F4AC61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		20FB3CEA1567EFA500F4AC61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		20FB3CED1567EFA600F4AC61 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		20FB3CF41567F12B00F4AC61 /* 05421_Wonderwall_Oasis.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 05421_Wonderwall_Oasis.lrc; sourceTree = "<group>"; };
 		2125F9A6156DF4060072BC46 /* Save Tonight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Save Tonight.mp3"; path = "../../../Music/iTunes/iTunes Media/Music/Eagle Eye Cherry/Unknown Album/Save Tonight.mp3"; sourceTree = "<group>"; };
+		21EC2087156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 05421_Wonderwall_Oasis.mp3; sourceTree = "<group>"; };
+		21EC2088156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 05421_Wonderwall_Oasis.lrc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,16 +100,15 @@
 				20FB3CE91567EFA500F4AC61 /* ViewController.h */,
 				20FB3CEA1567EFA500F4AC61 /* ViewController.m */,
 				20FB3CEC1567EFA600F4AC61 /* ViewController.xib */,
-				20FB3CF41567F12B00F4AC61 /* 05421_Wonderwall_Oasis.lrc */,
+				21EC2087156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 */,
+				21EC2088156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc */,
 				20F9A5B3156D363200ED44D7 /* NSMutableArray+Reverse.h */,
 				20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */,
 				20F9A5B7156D3A1A00ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.lrc */,
 				20FB3CDE1567EFA500F4AC61 /* Supporting Files */,
 				208166111568C4F800D288D7 /* LyricParser.h */,
 				208166121568C4F800D288D7 /* LyricParser.m */,
-				20F9A5B9156D3A2200ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.mp3 */,
 				2125F9A6156DF4060072BC46 /* Save Tonight.mp3 */,
-				20F9A5BF156D456000ED44D7 /* 05421_Wonderwall_Oasis.mp3 */,
 			);
 			path = LyricView;
 			sourceTree = "<group>";
@@ -179,11 +176,10 @@
 			files = (
 				20FB3CE21567EFA500F4AC61 /* InfoPlist.strings in Resources */,
 				20FB3CEE1567EFA600F4AC61 /* ViewController.xib in Resources */,
-				20FB3CF51567F12B00F4AC61 /* 05421_Wonderwall_Oasis.lrc in Resources */,
 				20F9A5B8156D3A1A00ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.lrc in Resources */,
-				20F9A5BA156D3A2200ED44D7 /* 08881_Save Tonight_Eagle-Eye Cherry.mp3 in Resources */,
-				20F9A5C0156D456000ED44D7 /* 05421_Wonderwall_Oasis.mp3 in Resources */,
 				2125F9A7156DF4060072BC46 /* Save Tonight.mp3 in Resources */,
+				21EC2089156F910400CD8E1D /* 05421_Wonderwall_Oasis.mp3 in Resources */,
+				21EC208A156F910400CD8E1D /* 05421_Wonderwall_Oasis.lrc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

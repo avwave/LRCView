@@ -23,14 +23,14 @@
 {
     [super viewDidLoad];
 
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Save Tonight.mp3", [[NSBundle mainBundle] resourcePath]]];
+	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/05421_Wonderwall_Oasis.mp3", [[NSBundle mainBundle] resourcePath]]];
 	
 	NSError *error;
 	audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-	audioPlayer.numberOfLoops = 1;
 	
 	if (audioPlayer != nil) {
 		[audioPlayer prepareToPlay];
+		[slider setMaximumValue:[audioPlayer duration]];
 		[self readFile];
 	}
 }
@@ -47,7 +47,7 @@
 }
 
 -(void)readFile {
-	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"08881_Save Tonight_Eagle-Eye Cherry" ofType:@"lrc"];
+	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"05421_Wonderwall_Oasis" ofType:@"lrc"];
 	NSError *error;
 	NSString *content = [[NSString alloc] initWithContentsOfFile:fileName
 													usedEncoding:nil
@@ -57,9 +57,66 @@
 }
 
 -(void)startPlaying:(id)sender {
-	[lyricParser startLyricEngineFromTime:0.0f];
-	[lyricParser startLineEngine];
+	[lyricParser startLyricEngineFromTime:[slider value]];
+	NSTimeInterval now = audioPlayer.deviceCurrentTime;
+	
+	[audioPlayer setCurrentTime:[slider value]];
 	[audioPlayer play];
 }
 
+- (NSString *)convertTimeFromSeconds:(float)seconds {
+    
+    // Return variable.
+    NSString *result = @"";
+	
+    // Int variables for calculation.
+    float secs = seconds;
+    int tempHour    = 0;
+    int tempMinute  = 0;
+    int tempSecond  = 0;
+	
+    NSString *hour      = @"";
+    NSString *minute    = @"";
+    NSString *second    = @"";
+	
+    // Convert the seconds to hours, minutes and seconds.
+    tempHour    = secs / 3600;
+    tempMinute  = secs / 60 - tempHour * 60;
+    tempSecond  = secs - (tempHour * 3600 + tempMinute * 60);
+    
+    hour    = [[NSNumber numberWithInt:tempHour] stringValue];
+    minute  = [[NSNumber numberWithInt:tempMinute] stringValue];
+    second  = [[NSNumber numberWithInt:tempSecond] stringValue];
+    
+    // Make time look like 00:00:00 and not 0:0:0
+    if (tempHour < 10) {
+        hour = [@"0" stringByAppendingString:hour];
+    } 
+    
+    if (tempMinute < 10) {
+        minute = [@"0" stringByAppendingString:minute];
+    }
+    
+    if (tempSecond < 10) {
+        second = [@"0" stringByAppendingString:second];
+    }
+    
+    if (tempHour == 0) {
+        result = [NSString stringWithFormat:@"%@:%@", minute, second];
+        
+    } else {
+		result = [NSString stringWithFormat:@"%@:%@:%@",hour, minute, second];
+        
+    }
+    
+    return result;
+	
+}
+
+
+-(void)scrub:(UISlider *)sender {
+	NSTimeInterval theTimeInterval = [sender value];
+	
+	[timeField setText:[self convertTimeFromSeconds:theTimeInterval]];
+}
 @end

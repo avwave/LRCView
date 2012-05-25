@@ -22,6 +22,16 @@
 	NSMutableArray *wordContents;
 	NSString *currentWord;
 	NSString *currentLine;
+	
+	NSString *line1Word;
+	NSString *line2Word;
+	NSString *line3Word;
+	
+	NSString *line1Line;
+	NSString *line2Line;
+	NSString *line3Line;
+	
+	int displayLine;
 }
 @property (assign) id <LyricParserDelegate> delegate;
 
@@ -29,7 +39,7 @@
 -(void)setLyrics:(NSString *)l;
 -(void)parseLyrics;
 -(NSString *)nextLine;
--(void)timerComplete;
+-(void)timerComplete:(NSString *)string;
 -(void)startLyricEngineFromTime:(float)timeInSeconds;
 -(void)startLineEngine;
 @end

@@ -13,10 +13,14 @@
 @interface ViewController : UIViewController <LyricParserDelegate>{
 	IBOutlet UILabel *lyricField;
 	IBOutlet LyricParser *lyricParser;
-	
+	IBOutlet UILabel *timeField;
+
 	AVAudioPlayer *audioPlayer;
+	NSDateFormatter *timeFormatter;	
+	IBOutlet UISlider *slider;
 }
 
 -(IBAction)startPlaying:(id)sender;
+-(IBAction)scrub:(id)sender;
 
 @end
