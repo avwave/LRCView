@@ -8,6 +8,7 @@
 
 #import "LyricParser.h"
 #import "NSMutableArray+Reverse.h"
+#define FONTSIZE 25.0f
 
 @implementation LyricParser
 @synthesize delegate;
@@ -47,37 +48,37 @@
 	CGContextScaleCTM(context, 1.0, -1.0);
 	
 	CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
-	CGContextSelectFont(context, "Helvetica", 16.0, kCGEncodingMacRoman);
+	CGContextSelectFont(context, "Futura LT Book", FONTSIZE, kCGEncodingMacRoman);
 	
-	CGContextSetTextPosition(context, 0, 0);
+	CGContextSetTextPosition(context, 0, 25);
 	CGContextShowText(context, [currentLine UTF8String], strlen([currentLine UTF8String]));
 		
 	CGContextSetFillColorWithColor(context, [UIColor magentaColor].CGColor);
-	CGContextSelectFont(context, "Helvetica", 16.0, kCGEncodingMacRoman);
+	CGContextSelectFont(context, "Futura LT Book", FONTSIZE, kCGEncodingMacRoman);
 	
-	CGContextSetTextPosition(context, 0, 0);
+	CGContextSetTextPosition(context, 0, 25);
 	CGContextShowText(context, [currentWord UTF8String], strlen([currentWord UTF8String]));
 	
 
 	//Line1
 	CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
-	CGContextSelectFont(context, "Helvetica", 16.0, kCGEncodingMacRoman);
+	CGContextSelectFont(context, "Futura LT Book", FONTSIZE, kCGEncodingMacRoman);
 	
-	CGContextSetTextPosition(context, 0, 90);
+	CGContextSetTextPosition(context, 0, 100);
 	CGContextShowText(context, [line1Line UTF8String], strlen([line1Line UTF8String]));
 	
 	//line2
 	CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
-	CGContextSelectFont(context, "Helvetica", 16.0, kCGEncodingMacRoman);
+	CGContextSelectFont(context, "Futura LT Book", FONTSIZE, kCGEncodingMacRoman);
 	
-	CGContextSetTextPosition(context, 0, 60);
+	CGContextSetTextPosition(context, 0, 75);
 	CGContextShowText(context, [line2Line UTF8String], strlen([line2Line UTF8String]));
 	
 	//line3
-	CGContextSetFillColorWithColor(context, [UIColor greenColor].CGColor);
-	CGContextSelectFont(context, "Helvetica", 16.0, kCGEncodingMacRoman);
+	CGContextSetFillColorWithColor(context, [UIColor purpleColor].CGColor);
+	CGContextSelectFont(context, "Futura LT Book", FONTSIZE, kCGEncodingMacRoman);
 	
-	CGContextSetTextPosition(context, 0, 30);
+	CGContextSetTextPosition(context, 0, 50);
 	CGContextShowText(context, [line3Line UTF8String], strlen([line3Line UTF8String]));
 		
 }
@@ -106,7 +107,7 @@
 	float previousTime = 0.0f;
 	float prTime = 0.0f;
 	for (int i=0; i<[lineSplit count]; i++) {
-		NSString *str = [[lineSplit objectAtIndex:i] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		NSString *str = [[lineSplit objectAtIndex:i] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 		if ([regextest evaluateWithObject:str] == YES){
 			NSArray *timeComponentArr = [[lineSplit objectAtIndex:i] componentsSeparatedByCharactersInSet:
 										 [NSCharacterSet characterSetWithCharactersInString:@":."]];
@@ -128,7 +129,7 @@
 			wordTimes = [[NSMutableArray alloc] initWithCapacity:1];
 			wordContents = [[NSMutableArray alloc] initWithCapacity:1];
 			for (int j=0; j<[wordSplit count]; j++) {
-				NSString *wstr = [[wordSplit objectAtIndex:j] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+				NSString *wstr = [[[wordSplit objectAtIndex:j] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]] lowercaseString];
 				if ([regextest evaluateWithObject:wstr] == YES){
 					NSArray *timeComponentArr = [[wordSplit objectAtIndex:j] componentsSeparatedByCharactersInSet:
 												 [NSCharacterSet characterSetWithCharactersInString:@":."]];
@@ -138,11 +139,11 @@
 					float interval = seconds - prTime;
 					prTime = seconds;
 					[wordTimes addObject:[NSNumber numberWithFloat: seconds]];
-					[wordContents addObject:[[wordSplit objectAtIndex:j+1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-					[tmpLineArr addObject:[[wordSplit objectAtIndex:j+1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+					[wordContents addObject:[[[wordSplit objectAtIndex:j+1] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]] lowercaseString]];
+					[tmpLineArr addObject:[[[wordSplit objectAtIndex:j+1] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]lowercaseString]];
 				}
 			}
-			[lineContents addObject: [NSString stringWithFormat:@"^^%@", [tmpLineArr componentsJoinedByString:@" "]]];
+			[lineContents addObject: [NSString stringWithFormat:@"^^%@", [tmpLineArr componentsJoinedByString:@""]]];
 			[lineTimes addObjectsFromArray:wordTimes];
 			[lineContents addObjectsFromArray:wordContents];
 		}
@@ -168,7 +169,7 @@
 	 
 -(void)clearLine {
 	currentWord = @"";
-	currentLine = [[lineContents lastObject]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+	currentLine = [[lineContents lastObject]stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 	
 	switch (displayLine) {
 		case 3:
@@ -201,7 +202,7 @@
 		line = [string stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"^"]];
 		
 		currentWord = @"";
-		currentLine = [line stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		currentLine = [line stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 		
 		switch (displayLine) {
 			case 3:
@@ -221,7 +222,7 @@
 		displayLine ++;
 
 	} else {
-		currentWord = [[NSString stringWithFormat:@"%@ %@", currentWord, string]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		currentWord = [[NSString stringWithFormat:@"%@%@", currentWord, string]stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 	}
 	[self setNeedsDisplay];
 }

@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+	NSTimer *sliderTimer;
+}
 -(void)readFile;
 @end
 
@@ -31,9 +33,11 @@
 	[self.audioPlayer play];  
 	
 
-	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Save Tonight" ofType:@"mp3"]];
+	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"05121_Don't Stop Believin'_Journey" ofType:@"mp3"]];
 	
 	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	
+	sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
 	
 	if (self.audioPlayer != nil) {
 		[slider setMaximumValue:[self.audioPlayer duration]];
@@ -41,6 +45,10 @@
 		[self.audioPlayer prepareToPlay];
 
 	}
+}
+
+-(void)updateSlider {
+	[timeField setText:[NSString stringWithFormat:@"%.2f",self.audioPlayer.currentTime]];
 }
 
 - (void)viewDidUnload
@@ -55,7 +63,7 @@
 }
 
 -(void)readFile {
-	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"08881_Save Tonight_Eagle-Eye Cherry" ofType:@"lrc"];
+	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"05121_Don't Stop Believin'_Journey" ofType:@"lrc"];
 	NSError *error;
 	NSString *content = [[NSString alloc] initWithContentsOfFile:fileName
 													usedEncoding:nil
