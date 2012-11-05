@@ -113,7 +113,7 @@
 										 [NSCharacterSet characterSetWithCharactersInString:@":."]];
 			float seconds = ([[timeComponentArr objectAtIndex:0] floatValue] * 60) + 
 							([[timeComponentArr objectAtIndex:1] floatValue]) + 
-							([[timeComponentArr objectAtIndex:2] floatValue]/100.0f);
+							([[timeComponentArr objectAtIndex:2] floatValue]/1000.0f);
 						
 			float interval = seconds - previousTime;
 			previousTime = seconds;
@@ -135,7 +135,7 @@
 												 [NSCharacterSet characterSetWithCharactersInString:@":."]];
 					float seconds = ([[timeComponentArr objectAtIndex:0] floatValue] * 60) + 
 					([[timeComponentArr objectAtIndex:1] floatValue]) + 
-					([[timeComponentArr objectAtIndex:2] floatValue]/100.0f);
+					([[timeComponentArr objectAtIndex:2] floatValue]/1000.0f);
 					float interval = seconds - prTime;
 					prTime = seconds;
 					[wordTimes addObject:[NSNumber numberWithFloat: seconds]];
