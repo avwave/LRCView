@@ -33,11 +33,11 @@
 	[self.audioPlayer play];  
 	
 
-	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"05121_Don't Stop Believin'_Journey" ofType:@"mp3"]];
+	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"2142" ofType:@"mp3"]];
 	
 	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
 	
-	sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
+	sliderTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
 	
 	if (self.audioPlayer != nil) {
 		[slider setMaximumValue:[self.audioPlayer duration]];
@@ -63,7 +63,7 @@
 }
 
 -(void)readFile {
-	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"05121_Don't Stop Believin'_Journey" ofType:@"lrc"];
+	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"2142" ofType:@"lrc"];
 	NSError *error;
 	NSString *content = [[NSString alloc] initWithContentsOfFile:fileName
 													usedEncoding:nil

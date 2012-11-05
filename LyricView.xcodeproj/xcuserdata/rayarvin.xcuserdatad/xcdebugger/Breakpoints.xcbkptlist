@@ -2,6 +2,34 @@
 <Bucket
    type = "1"
    version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LyricView/LyricParser.m"
+         timestampString = "373803334.720836"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "155"
+         endingLineNumber = "155"
+         landmarkName = "-startLyricEngineFromTime:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "LyricView/LyricParser.m"
+         timestampString = "373803390.908594"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
+         landmarkName = "-parseLyrics"
+         landmarkType = "5">
+      </FileBreakpoint>
+   </FileBreakpoints>
    <SymbolicBreakpoints>
       <SymbolicBreakpoint
          shouldBeEnabled = "Yes"

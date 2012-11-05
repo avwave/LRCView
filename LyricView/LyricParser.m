@@ -101,7 +101,7 @@
 	NSArray *lineSplit = [lyrics componentsSeparatedByCharactersInSet:
 						  [NSCharacterSet characterSetWithCharactersInString:@"[]"]];
 
-	NSString *regex = @"\\d\\d[:]\\d\\d.\\d{1,}";
+	NSString *regex = @"\\d{1,}[:]\\d{1,}.\\d{1,}";
 	NSPredicate *regextest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
 	
 	float previousTime = 0.0f;
