@@ -155,8 +155,10 @@
 	[NSObject cancelPreviousPerformRequestsWithTarget:self];
 	for (int i=0; i< [lineTimes count]; i++) {
 		if ([[lineTimes objectAtIndex:i] floatValue] > timeInSeconds) {
-			NSLog(@"%f, %@", [[lineTimes objectAtIndex:i] floatValue], [lineContents objectAtIndex:i]);
-			[self performSelector:@selector(timerComplete:) withObject:[lineContents objectAtIndex:i] afterDelay:[[lineTimes objectAtIndex:i] floatValue] - timeInSeconds];
+			NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+								  [lineContents objectAtIndex:i], @"line",
+								  [NSNumber numberWithFloat:[[lineTimes objectAtIndex:i] floatValue] - timeInSeconds], @"time", nil];
+			[self performSelector:@selector(timerComplete:) withObject:dict afterDelay:[[lineTimes objectAtIndex:i] floatValue] - timeInSeconds];
 		}
 	}
 	[self.delegate playAudio];
@@ -192,12 +194,14 @@
 	displayLine ++;
 }
 
--(void)timerComplete:(NSString *)string {
+-(void)timerComplete:(NSDictionary*) dict{
+	NSString *string = [dict objectForKey:@"line"];
 	if (string == nil) {
 		return;
 	}
 	
 	NSString *line;
+	NSLog(@"%@: %@ ", [dict objectForKey:@"time"], string);
 	if ([string hasPrefix:@"^^"]) {
 		line = [string stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"^"]];
 		

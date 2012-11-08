@@ -13,6 +13,8 @@
 		204F73841647AC1800D47794 /* Futura LT Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204F73821647AC1700D47794 /* Futura LT Bold.ttf */; };
 		204F738B1647C80E00D47794 /* 2142.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 204F73891647C80E00D47794 /* 2142.mp3 */; };
 		204F738C1647C80E00D47794 /* 2142.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 204F738A1647C80E00D47794 /* 2142.lrc */; };
+		205CF757164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 205CF755164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc */; };
+		205CF758164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 205CF756164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 */; };
 		208166131568C4F800D288D7 /* LyricParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 208166121568C4F800D288D7 /* LyricParser.m */; };
 		20F9A5B5156D363200ED44D7 /* NSMutableArray+Reverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */; };
 		20F9A5BE156D3BAB00ED44D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9A5BC156D3BAB00ED44D7 /* AVFoundation.framework */; };
@@ -34,6 +36,8 @@
 		204F73821647AC1700D47794 /* Futura LT Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Bold.ttf"; sourceTree = "<group>"; };
 		204F73891647C80E00D47794 /* 2142.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 2142.mp3; path = ../../../../Downloads/2142.mp3; sourceTree = "<group>"; };
 		204F738A1647C80E00D47794 /* 2142.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 2142.lrc; path = ../../../../Downloads/2142.lrc; sourceTree = "<group>"; };
+		205CF755164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pare_ko_melody_fixed.lrc; path = ../../../../Downloads/pare_ko_melody_fixed.lrc; sourceTree = "<group>"; };
+		205CF756164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pare_ko_melody_fixed.mp3; path = ../../../../Downloads/pare_ko_melody_fixed.mp3; sourceTree = "<group>"; };
 		208166111568C4F800D288D7 /* LyricParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricParser.h; sourceTree = "<group>"; };
 		208166121568C4F800D288D7 /* LyricParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricParser.m; sourceTree = "<group>"; };
 		20F9A5B3156D363200ED44D7 /* NSMutableArray+Reverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Reverse.h"; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				20FB3CE91567EFA500F4AC61 /* ViewController.h */,
 				20FB3CEA1567EFA500F4AC61 /* ViewController.m */,
 				20FB3CEC1567EFA600F4AC61 /* ViewController.xib */,
+				205CF755164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc */,
+				205CF756164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 */,
 				204F737D1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.mp3 */,
 				204F737E1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.lrc */,
 				20F9A5B3156D363200ED44D7 /* NSMutableArray+Reverse.h */,
@@ -192,6 +198,8 @@
 				204F73841647AC1800D47794 /* Futura LT Bold.ttf in Resources */,
 				204F738B1647C80E00D47794 /* 2142.mp3 in Resources */,
 				204F738C1647C80E00D47794 /* 2142.lrc in Resources */,
+				205CF757164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc in Resources */,
+				205CF758164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

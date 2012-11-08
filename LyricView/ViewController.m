@@ -33,7 +33,7 @@
 	[self.audioPlayer play];  
 	
 
-	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"2142" ofType:@"mp3"]];
+	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"pare_ko_melody_fixed" ofType:@"mp3"]];
 	
 	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
 	
@@ -63,7 +63,7 @@
 }
 
 -(void)readFile {
-	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"2142" ofType:@"lrc"];
+	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"pare_ko_melody_fixed" ofType:@"lrc"];
 	NSError *error;
 	NSString *content = [[NSString alloc] initWithContentsOfFile:fileName
 													usedEncoding:nil
@@ -76,11 +76,17 @@
 	if ([self.audioPlayer isPlaying]) {
 		[self.audioPlayer stop];
 	}
-	[lyricParser startLyricEngineFromTime:[slider value]];
+	
 	NSTimeInterval now = self.audioPlayer.deviceCurrentTime;
 	
 	[self.audioPlayer setCurrentTime:[slider value]];
-	[self.audioPlayer play];
+	
+	[lyricParser startLyricEngineFromTime:[slider value]];
+	NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+	[queue addOperationWithBlock:^{
+		[self.audioPlayer play];
+	}];
+
 }
 
 - (NSString *)convertTimeFromSeconds:(float)seconds {
