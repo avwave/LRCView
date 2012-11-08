@@ -12,35 +12,44 @@
 @required
 -(void)displayStringIntoLabel :(NSString *)component;
 -(void)playAudio;
+-(void)countdownStart :(float)cTime;
 @end
 
 @interface LyricParser : UIView {
 	NSString *lyrics;
 	NSMutableArray *lineTimes;
 	NSMutableArray *lineContents;
+	NSMutableArray *lineQueue;
 	
 	NSMutableArray *wordTimes;
 	NSMutableArray *wordContents;
 	NSString *currentWord;
 	NSString *currentLine;
 	
-	NSString *line1Word;
-	NSString *line2Word;
-	NSString *line3Word;
+	NSMutableArray *dispLineArray;
+	NSMutableArray *progressLineArray;
+	NSMutableArray *dispWordArray;
 	
-	NSString *line1Line;
-	NSString *line2Line;
-	NSString *line3Line;
-	
+    float startTimeInSeconds;
+    float endTimeInSeconds;
+    
 	int displayLine;
 }
-@property (assign) id <LyricParserDelegate> delegate;
+@property (assign) id delegate;
+@property (nonatomic, retain) NSMutableArray* timerArray;
+
+@property (readwrite) float startTimeInSeconds;
+@property (readwrite) float endTimeInSeconds;
+
 
 -(void)redraw;
 -(void)setLyrics:(NSString *)l;
 -(void)parseLyrics;
 -(NSString *)nextLine;
--(void)timerComplete:(NSString *)string;
 -(void)startLyricEngineFromTime:(float)timeInSeconds;
+-(void)startLyricEngine;
 -(void)startLineEngine;
+-(void)clearStrings;
+-(void)invalidateTimers;
+-(void)instantiateLyricFromLine:(int)startLine ToLine:(int)endLine;
 @end

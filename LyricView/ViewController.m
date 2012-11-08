@@ -70,8 +70,14 @@
 														   error:&error];
 	[lyricParser setDelegate:self];
 	[lyricParser setLyrics:content];
+	[lyricParser instantiateLyricFromLine:0	ToLine:0];
+    [lyricParser setStartTimeInSeconds:0];
+    [lyricParser setEndTimeInSeconds:9000];
 }
 
+-(void)countdownStart:(float)cTime {
+	
+}
 -(void)startPlaying:(id)sender {
 	if ([self.audioPlayer isPlaying]) {
 		[self.audioPlayer stop];
