@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#define SONGNAME @"BadRomance_09"
 #import "ViewController.h"
 
 @interface ViewController () {
@@ -27,15 +28,15 @@
     [super viewDidLoad];
 	
 	NSError* error = nil;
-	NSString* soundfilePath = [[NSBundle mainBundle] pathForResource:@"onsec" ofType:@"mp3"];
+	NSString* soundfilePath = [[NSBundle mainBundle]pathForResource:@"onsec" ofType:@"mp3"];
 	NSURL* soundfileURL = [NSURL fileURLWithPath:soundfilePath];
-	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundfileURL error:&error];
+	self.audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:soundfileURL error:&error];
 	[self.audioPlayer play];  
 	
 
-	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"pare_ko_melody_fixed" ofType:@"mp3"]];
+	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:SONGNAME ofType:@"wav"]];
 	
-	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+	self.audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
 	
 	sliderTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
 	
@@ -63,9 +64,9 @@
 }
 
 -(void)readFile {
-	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"pare_ko_melody_fixed" ofType:@"lrc"];
+	NSString *fileName = [[NSBundle mainBundle]pathForResource:SONGNAME ofType:@"lrc"];
 	NSError *error;
-	NSString *content = [[NSString alloc] initWithContentsOfFile:fileName
+	NSString *content = [[NSString alloc]initWithContentsOfFile:fileName
 													usedEncoding:nil
 														   error:&error];
 	[lyricParser setDelegate:self];
@@ -88,7 +89,7 @@
 	[self.audioPlayer setCurrentTime:[slider value]];
 	
 	[lyricParser startLyricEngineFromTime:[slider value]];
-	NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+	NSOperationQueue *queue = [[NSOperationQueue alloc]init];
 	[queue addOperationWithBlock:^{
 		[self.audioPlayer play];
 	}];
@@ -115,9 +116,9 @@
     tempMinute  = secs / 60 - tempHour * 60;
     tempSecond  = secs - (tempHour * 3600 + tempMinute * 60);
     
-    hour    = [[NSNumber numberWithInt:tempHour] stringValue];
-    minute  = [[NSNumber numberWithInt:tempMinute] stringValue];
-    second  = [[NSNumber numberWithInt:tempSecond] stringValue];
+    hour    = [[NSNumber numberWithInt:tempHour]stringValue];
+    minute  = [[NSNumber numberWithInt:tempMinute]stringValue];
+    second  = [[NSNumber numberWithInt:tempSecond]stringValue];
     
     // Make time look like 00:00:00 and not 0:0:0
     if (tempHour < 10) {

@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		204F737F1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 204F737D1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.mp3 */; };
-		204F73801647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 204F737E1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.lrc */; };
 		204F73831647AC1800D47794 /* Futura LT Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204F73811647AC1700D47794 /* Futura LT Book.ttf */; };
 		204F73841647AC1800D47794 /* Futura LT Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204F73821647AC1700D47794 /* Futura LT Bold.ttf */; };
 		204F738B1647C80E00D47794 /* 2142.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 204F73891647C80E00D47794 /* 2142.mp3 */; };
 		204F738C1647C80E00D47794 /* 2142.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 204F738A1647C80E00D47794 /* 2142.lrc */; };
-		205CF757164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 205CF755164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc */; };
-		205CF758164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 205CF756164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 */; };
+		207F898D16539B2D00FFF1A9 /* test.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 207F898C16539B2D00FFF1A9 /* test.lrc */; };
 		208166131568C4F800D288D7 /* LyricParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 208166121568C4F800D288D7 /* LyricParser.m */; };
+		20849B4816F04AE5001F2A8D /* BadRomance_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3316F04AE5001F2A8D /* BadRomance_01.wav */; };
+		20849B4916F04AE5001F2A8D /* BadRomance_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3416F04AE5001F2A8D /* BadRomance_02.wav */; };
+		20849B4A16F04AE5001F2A8D /* BadRomance_03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3516F04AE5001F2A8D /* BadRomance_03.wav */; };
+		20849B4B16F04AE5001F2A8D /* BadRomance_04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3616F04AE5001F2A8D /* BadRomance_04.wav */; };
+		20849B4C16F04AE5001F2A8D /* BadRomance_05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3716F04AE5001F2A8D /* BadRomance_05.wav */; };
+		20849B4D16F04AE5001F2A8D /* BadRomance_06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3816F04AE5001F2A8D /* BadRomance_06.wav */; };
+		20849B4E16F04AE5001F2A8D /* BadRomance_07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3916F04AE5001F2A8D /* BadRomance_07.wav */; };
+		20849B4F16F04AE5001F2A8D /* BadRomance_08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3A16F04AE5001F2A8D /* BadRomance_08.wav */; };
+		20849B5016F04AE5001F2A8D /* BadRomance_09.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3B16F04AE5001F2A8D /* BadRomance_09.wav */; };
+		20849B5116F04AE5001F2A8D /* BadRomance_notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3C16F04AE5001F2A8D /* BadRomance_notes.rtf */; };
+		20849B5216F04AE5001F2A8D /* BadRomance_01.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3E16F04AE5001F2A8D /* BadRomance_01.lrc */; };
+		20849B5316F04AE5001F2A8D /* BadRomance_02.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B3F16F04AE5001F2A8D /* BadRomance_02.lrc */; };
+		20849B5416F04AE5001F2A8D /* BadRomance_03.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B4016F04AE5001F2A8D /* BadRomance_03.lrc */; };
+		20849B5516F04AE5001F2A8D /* BadRomance_04.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B4116F04AE5001F2A8D /* BadRomance_04.lrc */; };
+		20849B5616F04AE5001F2A8D /* BadRomance_05.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B4216F04AE5001F2A8D /* BadRomance_05.lrc */; };
+		20849B5716F04AE5001F2A8D /* BadRomance_06.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B4316F04AE5001F2A8D /* BadRomance_06.lrc */; };
+		20849B5816F04AE5001F2A8D /* BadRomance_07.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B4416F04AE5001F2A8D /* BadRomance_07.lrc */; };
+		20849B5916F04AE5001F2A8D /* BadRomance_08.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B4516F04AE5001F2A8D /* BadRomance_08.lrc */; };
+		20849B5A16F04AE5001F2A8D /* BadRomance_09.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B4616F04AE5001F2A8D /* BadRomance_09.lrc */; };
+		20849B5B16F04AE5001F2A8D /* BadRomance_10.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20849B4716F04AE5001F2A8D /* BadRomance_10.lrc */; };
 		20F9A5B5156D363200ED44D7 /* NSMutableArray+Reverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */; };
 		20F9A5BE156D3BAB00ED44D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9A5BC156D3BAB00ED44D7 /* AVFoundation.framework */; };
 		20FB3CD81567EFA500F4AC61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FB3CD71567EFA500F4AC61 /* UIKit.framework */; };
@@ -30,16 +47,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		204F737D1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "05121_Don't Stop Believin'_Journey.mp3"; path = "../../../../Dropbox/Duets Shared/lrc sample/05121_Don't Stop Believin'_Journey.mp3"; sourceTree = "<group>"; };
-		204F737E1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "05121_Don't Stop Believin'_Journey.lrc"; path = "../../../../Dropbox/Duets Shared/lrc sample/05121_Don't Stop Believin'_Journey.lrc"; sourceTree = "<group>"; };
 		204F73811647AC1700D47794 /* Futura LT Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Book.ttf"; sourceTree = "<group>"; };
 		204F73821647AC1700D47794 /* Futura LT Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Bold.ttf"; sourceTree = "<group>"; };
 		204F73891647C80E00D47794 /* 2142.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 2142.mp3; path = ../../../../Downloads/2142.mp3; sourceTree = "<group>"; };
 		204F738A1647C80E00D47794 /* 2142.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 2142.lrc; path = ../../../../Downloads/2142.lrc; sourceTree = "<group>"; };
-		205CF755164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pare_ko_melody_fixed.lrc; path = ../../../../Downloads/pare_ko_melody_fixed.lrc; sourceTree = "<group>"; };
-		205CF756164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pare_ko_melody_fixed.mp3; path = ../../../../Downloads/pare_ko_melody_fixed.mp3; sourceTree = "<group>"; };
+		207F898C16539B2D00FFF1A9 /* test.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.lrc; sourceTree = "<group>"; };
 		208166111568C4F800D288D7 /* LyricParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricParser.h; sourceTree = "<group>"; };
 		208166121568C4F800D288D7 /* LyricParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricParser.m; sourceTree = "<group>"; };
+		20849B3316F04AE5001F2A8D /* BadRomance_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_01.wav; sourceTree = "<group>"; };
+		20849B3416F04AE5001F2A8D /* BadRomance_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_02.wav; sourceTree = "<group>"; };
+		20849B3516F04AE5001F2A8D /* BadRomance_03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_03.wav; sourceTree = "<group>"; };
+		20849B3616F04AE5001F2A8D /* BadRomance_04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_04.wav; sourceTree = "<group>"; };
+		20849B3716F04AE5001F2A8D /* BadRomance_05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_05.wav; sourceTree = "<group>"; };
+		20849B3816F04AE5001F2A8D /* BadRomance_06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_06.wav; sourceTree = "<group>"; };
+		20849B3916F04AE5001F2A8D /* BadRomance_07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_07.wav; sourceTree = "<group>"; };
+		20849B3A16F04AE5001F2A8D /* BadRomance_08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_08.wav; sourceTree = "<group>"; };
+		20849B3B16F04AE5001F2A8D /* BadRomance_09.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BadRomance_09.wav; sourceTree = "<group>"; };
+		20849B3C16F04AE5001F2A8D /* BadRomance_notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = BadRomance_notes.rtf; sourceTree = "<group>"; };
+		20849B3E16F04AE5001F2A8D /* BadRomance_01.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_01.lrc; sourceTree = "<group>"; };
+		20849B3F16F04AE5001F2A8D /* BadRomance_02.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_02.lrc; sourceTree = "<group>"; };
+		20849B4016F04AE5001F2A8D /* BadRomance_03.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_03.lrc; sourceTree = "<group>"; };
+		20849B4116F04AE5001F2A8D /* BadRomance_04.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_04.lrc; sourceTree = "<group>"; };
+		20849B4216F04AE5001F2A8D /* BadRomance_05.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_05.lrc; sourceTree = "<group>"; };
+		20849B4316F04AE5001F2A8D /* BadRomance_06.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_06.lrc; sourceTree = "<group>"; };
+		20849B4416F04AE5001F2A8D /* BadRomance_07.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_07.lrc; sourceTree = "<group>"; };
+		20849B4516F04AE5001F2A8D /* BadRomance_08.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_08.lrc; sourceTree = "<group>"; };
+		20849B4616F04AE5001F2A8D /* BadRomance_09.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_09.lrc; sourceTree = "<group>"; };
+		20849B4716F04AE5001F2A8D /* BadRomance_10.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadRomance_10.lrc; sourceTree = "<group>"; };
 		20F9A5B3156D363200ED44D7 /* NSMutableArray+Reverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Reverse.h"; sourceTree = "<group>"; };
 		20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Reverse.m"; sourceTree = "<group>"; };
 		20F9A5BC156D3BAB00ED44D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -74,6 +108,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20849B3216F04AE5001F2A8D /* Bad Romance */ = {
+			isa = PBXGroup;
+			children = (
+				20849B3316F04AE5001F2A8D /* BadRomance_01.wav */,
+				20849B3416F04AE5001F2A8D /* BadRomance_02.wav */,
+				20849B3516F04AE5001F2A8D /* BadRomance_03.wav */,
+				20849B3616F04AE5001F2A8D /* BadRomance_04.wav */,
+				20849B3716F04AE5001F2A8D /* BadRomance_05.wav */,
+				20849B3816F04AE5001F2A8D /* BadRomance_06.wav */,
+				20849B3916F04AE5001F2A8D /* BadRomance_07.wav */,
+				20849B3A16F04AE5001F2A8D /* BadRomance_08.wav */,
+				20849B3B16F04AE5001F2A8D /* BadRomance_09.wav */,
+				20849B3C16F04AE5001F2A8D /* BadRomance_notes.rtf */,
+				20849B3D16F04AE5001F2A8D /* lyrics */,
+			);
+			name = "Bad Romance";
+			path = "../../../../Dropbox/song_processing/Bad Romance";
+			sourceTree = "<group>";
+		};
+		20849B3D16F04AE5001F2A8D /* lyrics */ = {
+			isa = PBXGroup;
+			children = (
+				20849B3E16F04AE5001F2A8D /* BadRomance_01.lrc */,
+				20849B3F16F04AE5001F2A8D /* BadRomance_02.lrc */,
+				20849B4016F04AE5001F2A8D /* BadRomance_03.lrc */,
+				20849B4116F04AE5001F2A8D /* BadRomance_04.lrc */,
+				20849B4216F04AE5001F2A8D /* BadRomance_05.lrc */,
+				20849B4316F04AE5001F2A8D /* BadRomance_06.lrc */,
+				20849B4416F04AE5001F2A8D /* BadRomance_07.lrc */,
+				20849B4516F04AE5001F2A8D /* BadRomance_08.lrc */,
+				20849B4616F04AE5001F2A8D /* BadRomance_09.lrc */,
+				20849B4716F04AE5001F2A8D /* BadRomance_10.lrc */,
+			);
+			path = lyrics;
+			sourceTree = "<group>";
+		};
 		20FB3CC81567EFA500F4AC61 = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +185,10 @@
 				20FB3CE91567EFA500F4AC61 /* ViewController.h */,
 				20FB3CEA1567EFA500F4AC61 /* ViewController.m */,
 				20FB3CEC1567EFA600F4AC61 /* ViewController.xib */,
-				205CF755164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc */,
-				205CF756164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 */,
-				204F737D1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.mp3 */,
-				204F737E1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.lrc */,
+				207F898C16539B2D00FFF1A9 /* test.lrc */,
 				20F9A5B3156D363200ED44D7 /* NSMutableArray+Reverse.h */,
 				20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */,
+				20849B3216F04AE5001F2A8D /* Bad Romance */,
 				20FB3CDE1567EFA500F4AC61 /* Supporting Files */,
 				208166111568C4F800D288D7 /* LyricParser.h */,
 				208166121568C4F800D288D7 /* LyricParser.m */,
@@ -192,14 +260,31 @@
 				20FB3CE21567EFA500F4AC61 /* InfoPlist.strings in Resources */,
 				20FB3CEE1567EFA600F4AC61 /* ViewController.xib in Resources */,
 				21CA51F2156FA01000EA16A9 /* onsec.mp3 in Resources */,
-				204F737F1647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.mp3 in Resources */,
-				204F73801647ABFA00D47794 /* 05121_Don't Stop Believin'_Journey.lrc in Resources */,
 				204F73831647AC1800D47794 /* Futura LT Book.ttf in Resources */,
 				204F73841647AC1800D47794 /* Futura LT Bold.ttf in Resources */,
 				204F738B1647C80E00D47794 /* 2142.mp3 in Resources */,
 				204F738C1647C80E00D47794 /* 2142.lrc in Resources */,
-				205CF757164B7EEC00F5DBB7 /* pare_ko_melody_fixed.lrc in Resources */,
-				205CF758164B7EEC00F5DBB7 /* pare_ko_melody_fixed.mp3 in Resources */,
+				207F898D16539B2D00FFF1A9 /* test.lrc in Resources */,
+				20849B4816F04AE5001F2A8D /* BadRomance_01.wav in Resources */,
+				20849B4916F04AE5001F2A8D /* BadRomance_02.wav in Resources */,
+				20849B4A16F04AE5001F2A8D /* BadRomance_03.wav in Resources */,
+				20849B4B16F04AE5001F2A8D /* BadRomance_04.wav in Resources */,
+				20849B4C16F04AE5001F2A8D /* BadRomance_05.wav in Resources */,
+				20849B4D16F04AE5001F2A8D /* BadRomance_06.wav in Resources */,
+				20849B4E16F04AE5001F2A8D /* BadRomance_07.wav in Resources */,
+				20849B4F16F04AE5001F2A8D /* BadRomance_08.wav in Resources */,
+				20849B5016F04AE5001F2A8D /* BadRomance_09.wav in Resources */,
+				20849B5116F04AE5001F2A8D /* BadRomance_notes.rtf in Resources */,
+				20849B5216F04AE5001F2A8D /* BadRomance_01.lrc in Resources */,
+				20849B5316F04AE5001F2A8D /* BadRomance_02.lrc in Resources */,
+				20849B5416F04AE5001F2A8D /* BadRomance_03.lrc in Resources */,
+				20849B5516F04AE5001F2A8D /* BadRomance_04.lrc in Resources */,
+				20849B5616F04AE5001F2A8D /* BadRomance_05.lrc in Resources */,
+				20849B5716F04AE5001F2A8D /* BadRomance_06.lrc in Resources */,
+				20849B5816F04AE5001F2A8D /* BadRomance_07.lrc in Resources */,
+				20849B5916F04AE5001F2A8D /* BadRomance_08.lrc in Resources */,
+				20849B5A16F04AE5001F2A8D /* BadRomance_09.lrc in Resources */,
+				20849B5B16F04AE5001F2A8D /* BadRomance_10.lrc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

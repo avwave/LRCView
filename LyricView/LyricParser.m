@@ -15,7 +15,7 @@
 @synthesize delegate, timerArray, startTimeInSeconds, endTimeInSeconds;
 
 -(void)clearStrings {
-	for (int i=0; i < [progressLineArray count] ; i++) {
+	for (int i=0; i < [progressLineArray count]; i++) {
 		[progressLineArray replaceObjectAtIndex:i withObject:@""];
 	}
 	
@@ -40,7 +40,7 @@
     self = [super initWithFrame:frame];
     if (self) {
 		displayLine = 1;
-		dispLineArray = [[NSMutableArray alloc] init];
+		dispLineArray = [[NSMutableArray alloc]init];
 		[self clearStrings];
 	}
     return self;
@@ -50,8 +50,8 @@
 	self = [super initWithCoder:aDecoder];
     if (self) {
 		displayLine = 1;
-		dispLineArray = [[NSMutableArray alloc] init];
-		progressLineArray = [[NSMutableArray alloc] initWithCapacity:10];
+		dispLineArray = [[NSMutableArray alloc]init];
+		progressLineArray = [[NSMutableArray alloc]initWithCapacity:10];
 		[self clearStrings];
     }
     return self;
@@ -65,13 +65,13 @@
 	
 	float offset = 25;
 	
-	int totallinecount = [dispLineArray count] > 8 ? 8 : [dispLineArray count];
+	int totallinecount = [dispLineArray count]>8 ? 8 : [dispLineArray count];
 	for (int i = 0; i <totallinecount; i++) {
 		CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
 		CGContextSelectFont(context, "Futura LT Book", FONTSIZE, kCGEncodingMacRoman);
 		
 		CGContextSetTextPosition(context, 0, (200+offset) - (i*25));
-		CGContextShowText(context, [[dispLineArray objectAtIndex:i] UTF8String], strlen([[dispLineArray objectAtIndex:i] UTF8String]));
+		CGContextShowText(context, [[dispLineArray objectAtIndex:i]UTF8String], strlen([[dispLineArray objectAtIndex:i]UTF8String]));
 	}
 	
 	for (int i = 0; i <[progressLineArray count]; i++) {
@@ -79,16 +79,16 @@
 		CGContextSelectFont(context, "Futura LT Book", FONTSIZE, kCGEncodingMacRoman);
 		
 		CGContextSetTextPosition(context, 0, (200+offset) - (i*25));
-		CGContextShowText(context, [[progressLineArray objectAtIndex:i] UTF8String], strlen([[progressLineArray objectAtIndex:i] UTF8String]));
+		CGContextShowText(context, [[progressLineArray objectAtIndex:i]UTF8String], strlen([[progressLineArray objectAtIndex:i]UTF8String]));
 	}
 	
 }
 
 -(void)setLyrics:(NSString *)l {
 	lyrics = [NSString stringWithString:l];
-	lineTimes = [[NSMutableArray alloc] initWithCapacity:1];
-	lineContents = [[NSMutableArray alloc] initWithCapacity:1];
-	lineQueue = [[NSMutableArray alloc] initWithCapacity:1];
+	lineTimes = [[NSMutableArray alloc]initWithCapacity:1];
+	lineContents = [[NSMutableArray alloc]initWithCapacity:1];
+	lineQueue = [[NSMutableArray alloc]initWithCapacity:1];
 	[self parseLyrics];
 	
 	[NSTimer scheduledTimerWithTimeInterval:0.0f target:self selector:@selector(redraw) userInfo:nil repeats:YES];
@@ -108,13 +108,13 @@
 	float previousTime = 0.0f;
 	float prTime = 0.0f;
 	for (int i=0; i<[lineSplit count]; i++) {
-		NSString *str = [[lineSplit objectAtIndex:i] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-		if ([regextest evaluateWithObject:str] == YES){
-			NSArray *timeComponentArr = [[lineSplit objectAtIndex:i] componentsSeparatedByCharactersInSet:
+		NSString *str = [[lineSplit objectAtIndex:i]stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+		if ([regextest evaluateWithObject:str]== YES){
+			NSArray *timeComponentArr = [[lineSplit objectAtIndex:i]componentsSeparatedByCharactersInSet:
 										 [NSCharacterSet characterSetWithCharactersInString:@":."]];
-			float lseconds = ([[timeComponentArr objectAtIndex:0] floatValue] * 60) +
-			([[timeComponentArr objectAtIndex:1] floatValue]) +
-			([[timeComponentArr objectAtIndex:2] floatValue]/1000.0f);
+			float lseconds = ([[timeComponentArr objectAtIndex:0]floatValue]* 60) +
+			([[timeComponentArr objectAtIndex:1]floatValue]) +
+			([[timeComponentArr objectAtIndex:2]floatValue]/1000.0f);
 			
 			float interval = lseconds - previousTime;
 			previousTime = lseconds;
@@ -126,22 +126,22 @@
 			NSArray *wordSplit = [lineStr componentsSeparatedByCharactersInSet:
 								  [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
 			
-			NSMutableArray *tmpLineArr = [[NSMutableArray alloc] initWithCapacity:1];
-			wordTimes = [[NSMutableArray alloc] initWithCapacity:1];
-			wordContents = [[NSMutableArray alloc] initWithCapacity:1];
+			NSMutableArray *tmpLineArr = [[NSMutableArray alloc]initWithCapacity:1];
+			wordTimes = [[NSMutableArray alloc]initWithCapacity:1];
+			wordContents = [[NSMutableArray alloc]initWithCapacity:1];
 			for (int j=0; j<[wordSplit count]; j++) {
-				NSString *wstr = [[wordSplit objectAtIndex:j] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-				if ([regextest evaluateWithObject:wstr] == YES){
-					NSArray *timeComponentArr = [[wordSplit objectAtIndex:j] componentsSeparatedByCharactersInSet:
+				NSString *wstr = [[wordSplit objectAtIndex:j]stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+				if ([regextest evaluateWithObject:wstr]== YES){
+					NSArray *timeComponentArr = [[wordSplit objectAtIndex:j]componentsSeparatedByCharactersInSet:
 												 [NSCharacterSet characterSetWithCharactersInString:@":."]];
-					float seconds = ([[timeComponentArr objectAtIndex:0] floatValue] * 60) +
-					([[timeComponentArr objectAtIndex:1] floatValue]) +
-					([[timeComponentArr objectAtIndex:2] floatValue]/1000.0f);
+					float seconds = ([[timeComponentArr objectAtIndex:0]floatValue]* 60) +
+					([[timeComponentArr objectAtIndex:1]floatValue]) +
+					([[timeComponentArr objectAtIndex:2]floatValue]/1000.0f);
 					float interval = seconds - prTime;
 					prTime = seconds;
 					[wordTimes addObject:[NSNumber numberWithFloat: seconds]];
-					[wordContents addObject:[[[wordSplit objectAtIndex:j+1] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]] lowercaseString]];
-					[tmpLineArr addObject:[[[wordSplit objectAtIndex:j+1] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]lowercaseString]];
+					[wordContents addObject:[[wordSplit objectAtIndex:j+1]stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
+					[tmpLineArr addObject:[[wordSplit objectAtIndex:j+1]stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
 				}
 			}
 			[lineContents addObject: [NSString stringWithFormat:@"^^%@", [tmpLineArr componentsJoinedByString:@""]]];
@@ -154,8 +154,8 @@
 		//i++;
 	}
 	
-	if ([lineTimes count] > 0) {
-		[self.delegate countdownStart:[[lineTimes objectAtIndex:1] floatValue]];
+	if ([lineTimes count]>0) {
+		[self.delegate countdownStart:[[lineTimes objectAtIndex:1]floatValue]];
 	}
 	
 }
@@ -164,9 +164,9 @@
 	specialCase = YES;
 	[self clearStrings];
 	
-	dispLineArray = [[NSMutableArray alloc] initWithArray:lineQueue];
+	dispLineArray = [[NSMutableArray alloc]initWithArray:lineQueue];
 	
-	progressLineArray = [[NSMutableArray alloc] initWithArray:lineQueue];
+	progressLineArray = [[NSMutableArray alloc]initWithArray:lineQueue];
 	
 	[self clearStrings];
 	
@@ -184,15 +184,15 @@
 	//NSLog(@"lyric engine : %.2f to %.2f", startTimeInSeconds, endTimeInSeconds);
 	
 	float secondOverlay = 0.0f;
-	self.timerArray = [[NSMutableArray alloc] initWithCapacity:1];
+	self.timerArray = [[NSMutableArray alloc]initWithCapacity:1];
 	for (int i=0; i< [lineTimes count]; i++) {
-		if ([[lineTimes objectAtIndex:i] floatValue] > startTimeInSeconds) {
-			//NSLog(@"%f, %@", [[lineTimes objectAtIndex:i] floatValue], [lineContents objectAtIndex:i]);
+		if ([[lineTimes objectAtIndex:i]floatValue]>startTimeInSeconds) {
+			//NSLog(@"%f, %@", [[lineTimes objectAtIndex:i]floatValue], [lineContents objectAtIndex:i]);
 			
-			NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:[lineContents objectAtIndex:i], @"line", nil];
-			NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:([[lineTimes objectAtIndex:i] floatValue] - startTimeInSeconds - secondOverlay) target:self selector:@selector(timerComplete:) userInfo:dict repeats:NO];
+			NSDictionary *dict = [[NSDictionary alloc]initWithObjectsAndKeys:[lineContents objectAtIndex:i], @"line", nil];
+			NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:([[lineTimes objectAtIndex:i]floatValue]- startTimeInSeconds - secondOverlay) target:self selector:@selector(timerComplete:) userInfo:dict repeats:NO];
 			[self.timerArray addObject:timer];
-			//[self performSelector:@selector(timerComplete:) withObject:[lineContents objectAtIndex:i] afterDelay:[[lineTimes objectAtIndex:i] floatValue] - timeInSeconds - secondOverlay];
+			//[self performSelector:@selector(timerComplete:) withObject:[lineContents objectAtIndex:i]afterDelay:[[lineTimes objectAtIndex:i]floatValue]- timeInSeconds - secondOverlay];
 		}
 		
 	}
@@ -211,13 +211,13 @@
 	NSString *line;
 	if ([string hasPrefix:@"^^"]) {
 		line = [string stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"^"]];
-		if ([line length] > 0) {
+		if ([line length]>0) {
 			displayLine ++;
 		} else {
 			displayLine = 0;
 		}
 		
-		if (displayLine > 3) {
+		if (displayLine >3) {
 			[dispLineArray removeObjectAtIndex:0];  //pop line
 			[dispLineArray removeObjectAtIndex:0];
 			
