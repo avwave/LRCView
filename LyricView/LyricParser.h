@@ -20,19 +20,19 @@
 	NSMutableArray *lineTimes;
 	NSMutableArray *lineContents;
 	NSMutableArray *lineQueue;
-	
+
 	NSMutableArray *wordTimes;
 	NSMutableArray *wordContents;
 	NSString *currentWord;
 	NSString *currentLine;
-	
+
 	NSMutableArray *dispLineArray;
 	NSMutableArray *progressLineArray;
 	NSMutableArray *dispWordArray;
-	
+
     float startTimeInSeconds;
     float endTimeInSeconds;
-    
+
 	int displayLine;
 }
 @property (assign) id delegate;

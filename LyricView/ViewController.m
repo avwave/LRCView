@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#define SONGNAME @"BadRomance_09"
+#define SONGNAME @"come_away_with_me_06"
 #import "ViewController.h"
 
 @interface ViewController () {
@@ -21,6 +21,10 @@
 -(void)displayStringIntoLabel:(NSString *)component {
 	NSLog(@"%@", component);
 	[lyricField setText:component];
+}
+
+-(void)playAudio {
+	
 }
 
 - (void)viewDidLoad
@@ -84,11 +88,11 @@
 		[self.audioPlayer stop];
 	}
 	
-	NSTimeInterval now = self.audioPlayer.deviceCurrentTime;
+	//	NSTimeInterval now = self.audioPlayer.deviceCurrentTime;
 	
 	[self.audioPlayer setCurrentTime:[slider value]];
 	
-	[lyricParser startLyricEngineFromTime:[slider value]];
+	[lyricParser startLyricEngine];
 	NSOperationQueue *queue = [[NSOperationQueue alloc]init];
 	[queue addOperationWithBlock:^{
 		[self.audioPlayer play];
