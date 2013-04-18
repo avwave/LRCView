@@ -6,11 +6,19 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#define SONGNAME @"come_away_with_me_06"
+#define SONGNAME @"JustDance_07"
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface ViewController () {
 	NSTimer *sliderTimer;
+	IBOutlet UILabel *animLabel;
+	IBOutlet UILabel *upNextAnimLabel;
+	IBOutlet UIView *lyricBounds;
+	NSString *displayString;
+	CGRect prevFrame;
+	CGRect upNextPrevFrame;
 }
 -(void)readFile;
 @end
@@ -18,10 +26,6 @@
 @implementation ViewController
 @synthesize audioPlayer;
 
--(void)displayStringIntoLabel:(NSString *)component {
-	NSLog(@"%@", component);
-	[lyricField setText:component];
-}
 
 -(void)playAudio {
 	

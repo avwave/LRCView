@@ -41,6 +41,7 @@
 @property (readwrite) float startTimeInSeconds;
 @property (readwrite) float endTimeInSeconds;
 
+@property (readwrite) BOOL isLessLines;
 
 -(void)redraw;
 -(void)setLyrics:(NSString *)l;

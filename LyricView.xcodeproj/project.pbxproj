@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20007CF2171D2F79008B16B8 /* AUIAnimatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20007CEF171D2F79008B16B8 /* AUIAnimatableLabel.m */; };
+		20007CF3171D2F79008B16B8 /* UIFont+CoreTextExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20007CF1171D2F79008B16B8 /* UIFont+CoreTextExtensions.m */; };
+		20007CF5171D310B008B16B8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20007CF4171D310A008B16B8 /* CoreText.framework */; };
+		20007CF7171D312F008B16B8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20007CF6171D312F008B16B8 /* QuartzCore.framework */; };
+		20007D0B171D5068008B16B8 /* JustDance_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CF9171D5068008B16B8 /* JustDance_01.wav */; };
+		20007D0C171D5068008B16B8 /* JustDance_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFA171D5068008B16B8 /* JustDance_02.wav */; };
+		20007D0D171D5068008B16B8 /* JustDance_03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFB171D5068008B16B8 /* JustDance_03.wav */; };
+		20007D0E171D5068008B16B8 /* JustDance_04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFC171D5068008B16B8 /* JustDance_04.wav */; };
+		20007D0F171D5068008B16B8 /* JustDance_05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFD171D5068008B16B8 /* JustDance_05.wav */; };
+		20007D10171D5068008B16B8 /* JustDance_06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFE171D5068008B16B8 /* JustDance_06.wav */; };
+		20007D11171D5068008B16B8 /* JustDance_07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFF171D5068008B16B8 /* JustDance_07.wav */; };
+		20007D12171D5068008B16B8 /* JustDance_08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007D00171D5068008B16B8 /* JustDance_08.wav */; };
+		20007D13171D5068008B16B8 /* JustDance_notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 20007D01171D5068008B16B8 /* JustDance_notes.rtf */; };
+		20007D14171D5068008B16B8 /* JustDance_01.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D03171D5068008B16B8 /* JustDance_01.lrc */; };
+		20007D15171D5068008B16B8 /* JustDance_02.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D04171D5068008B16B8 /* JustDance_02.lrc */; };
+		20007D16171D5068008B16B8 /* JustDance_03.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D05171D5068008B16B8 /* JustDance_03.lrc */; };
+		20007D17171D5068008B16B8 /* JustDance_04.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D06171D5068008B16B8 /* JustDance_04.lrc */; };
+		20007D18171D5068008B16B8 /* JustDance_05.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D07171D5068008B16B8 /* JustDance_05.lrc */; };
+		20007D19171D5068008B16B8 /* JustDance_06.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D08171D5068008B16B8 /* JustDance_06.lrc */; };
+		20007D1A171D5068008B16B8 /* JustDance_07.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D09171D5068008B16B8 /* JustDance_07.lrc */; };
+		20007D1B171D5068008B16B8 /* JustDance_08.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D0A171D5068008B16B8 /* JustDance_08.lrc */; };
 		204F73831647AC1800D47794 /* Futura LT Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204F73811647AC1700D47794 /* Futura LT Book.ttf */; };
 		204F73841647AC1800D47794 /* Futura LT Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204F73821647AC1700D47794 /* Futura LT Bold.ttf */; };
 		204F738B1647C80E00D47794 /* 2142.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 204F73891647C80E00D47794 /* 2142.mp3 */; };
@@ -14,21 +35,17 @@
 		207F898D16539B2D00FFF1A9 /* test.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 207F898C16539B2D00FFF1A9 /* test.lrc */; };
 		208166131568C4F800D288D7 /* LyricParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 208166121568C4F800D288D7 /* LyricParser.m */; };
 		20849B8116F06BA9001F2A8D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20849B8016F06BA9001F2A8D /* Default-568h@2x.png */; };
-		20C98A23170D5102008194BF /* Come Away With Me - Norah Jones.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A12170D5102008194BF /* Come Away With Me - Norah Jones.mp3 */; };
-		20C98A24170D5102008194BF /* come_away_with_me_NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A13170D5102008194BF /* come_away_with_me_NOTES.rtf */; };
-		20C98A25170D5102008194BF /* come_away_with_me_vox.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A14170D5102008194BF /* come_away_with_me_vox.wav */; };
-		20C98A26170D5102008194BF /* come_away_with_me_01.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A16170D5102008194BF /* come_away_with_me_01.lrc */; };
-		20C98A27170D5102008194BF /* come_away_with_me_02.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A17170D5102008194BF /* come_away_with_me_02.lrc */; };
-		20C98A28170D5102008194BF /* come_away_with_me_03.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A18170D5102008194BF /* come_away_with_me_03.lrc */; };
-		20C98A29170D5102008194BF /* come_away_with_me_04.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A19170D5102008194BF /* come_away_with_me_04.lrc */; };
-		20C98A2A170D5102008194BF /* come_away_with_me_05.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A1A170D5102008194BF /* come_away_with_me_05.lrc */; };
-		20C98A2B170D5102008194BF /* come_away_with_me_06.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A1B170D5102008194BF /* come_away_with_me_06.lrc */; };
-		20C98A2C170D5102008194BF /* come_away_with_me_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A1D170D5102008194BF /* come_away_with_me_01.wav */; };
-		20C98A2D170D5102008194BF /* come_away_with_me_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A1E170D5102008194BF /* come_away_with_me_02.wav */; };
-		20C98A2E170D5102008194BF /* come_away_with_me_03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A1F170D5102008194BF /* come_away_with_me_03.wav */; };
-		20C98A2F170D5102008194BF /* come_away_with_me_04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A20170D5102008194BF /* come_away_with_me_04.wav */; };
-		20C98A30170D5102008194BF /* come_away_with_me_05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A21170D5102008194BF /* come_away_with_me_05.wav */; };
-		20C98A31170D5102008194BF /* come_away_with_me_06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20C98A22170D5102008194BF /* come_away_with_me_06.wav */; };
+		209D6D2E1720090100E26ACF /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D231720090100E26ACF /* Lato-Black.ttf */; };
+		209D6D2F1720090100E26ACF /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D241720090100E26ACF /* Lato-BlackItalic.ttf */; };
+		209D6D301720090100E26ACF /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D251720090100E26ACF /* Lato-Bold.ttf */; };
+		209D6D311720090100E26ACF /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D261720090100E26ACF /* Lato-BoldItalic.ttf */; };
+		209D6D321720090100E26ACF /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D271720090100E26ACF /* Lato-Hairline.ttf */; };
+		209D6D331720090100E26ACF /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D281720090100E26ACF /* Lato-HairlineItalic.ttf */; };
+		209D6D341720090100E26ACF /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D291720090100E26ACF /* Lato-Italic.ttf */; };
+		209D6D351720090100E26ACF /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D2A1720090100E26ACF /* Lato-Light.ttf */; };
+		209D6D361720090100E26ACF /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D2B1720090100E26ACF /* Lato-LightItalic.ttf */; };
+		209D6D371720090100E26ACF /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D2C1720090100E26ACF /* Lato-Regular.ttf */; };
+		209D6D381720090100E26ACF /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 209D6D2D1720090100E26ACF /* OFL.txt */; };
 		20F9A5B5156D363200ED44D7 /* NSMutableArray+Reverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */; };
 		20F9A5BE156D3BAB00ED44D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F9A5BC156D3BAB00ED44D7 /* AVFoundation.framework */; };
 		20FB3CD81567EFA500F4AC61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FB3CD71567EFA500F4AC61 /* UIKit.framework */; };
@@ -43,6 +60,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20007CEE171D2F79008B16B8 /* AUIAnimatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUIAnimatableLabel.h; sourceTree = "<group>"; };
+		20007CEF171D2F79008B16B8 /* AUIAnimatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUIAnimatableLabel.m; sourceTree = "<group>"; };
+		20007CF0171D2F79008B16B8 /* UIFont+CoreTextExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CoreTextExtensions.h"; sourceTree = "<group>"; };
+		20007CF1171D2F79008B16B8 /* UIFont+CoreTextExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CoreTextExtensions.m"; sourceTree = "<group>"; };
+		20007CF4171D310A008B16B8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		20007CF6171D312F008B16B8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		20007CF9171D5068008B16B8 /* JustDance_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_01.wav; sourceTree = "<group>"; };
+		20007CFA171D5068008B16B8 /* JustDance_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_02.wav; sourceTree = "<group>"; };
+		20007CFB171D5068008B16B8 /* JustDance_03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_03.wav; sourceTree = "<group>"; };
+		20007CFC171D5068008B16B8 /* JustDance_04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_04.wav; sourceTree = "<group>"; };
+		20007CFD171D5068008B16B8 /* JustDance_05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_05.wav; sourceTree = "<group>"; };
+		20007CFE171D5068008B16B8 /* JustDance_06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_06.wav; sourceTree = "<group>"; };
+		20007CFF171D5068008B16B8 /* JustDance_07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_07.wav; sourceTree = "<group>"; };
+		20007D00171D5068008B16B8 /* JustDance_08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_08.wav; sourceTree = "<group>"; };
+		20007D01171D5068008B16B8 /* JustDance_notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = JustDance_notes.rtf; sourceTree = "<group>"; };
+		20007D03171D5068008B16B8 /* JustDance_01.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_01.lrc; sourceTree = "<group>"; };
+		20007D04171D5068008B16B8 /* JustDance_02.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_02.lrc; sourceTree = "<group>"; };
+		20007D05171D5068008B16B8 /* JustDance_03.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_03.lrc; sourceTree = "<group>"; };
+		20007D06171D5068008B16B8 /* JustDance_04.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_04.lrc; sourceTree = "<group>"; };
+		20007D07171D5068008B16B8 /* JustDance_05.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_05.lrc; sourceTree = "<group>"; };
+		20007D08171D5068008B16B8 /* JustDance_06.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_06.lrc; sourceTree = "<group>"; };
+		20007D09171D5068008B16B8 /* JustDance_07.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_07.lrc; sourceTree = "<group>"; };
+		20007D0A171D5068008B16B8 /* JustDance_08.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_08.lrc; sourceTree = "<group>"; };
 		204F73811647AC1700D47794 /* Futura LT Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Book.ttf"; sourceTree = "<group>"; };
 		204F73821647AC1700D47794 /* Futura LT Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Bold.ttf"; sourceTree = "<group>"; };
 		204F73891647C80E00D47794 /* 2142.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 2142.mp3; path = ../../../../Downloads/2142.mp3; sourceTree = "<group>"; };
@@ -51,21 +91,17 @@
 		208166111568C4F800D288D7 /* LyricParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricParser.h; sourceTree = "<group>"; };
 		208166121568C4F800D288D7 /* LyricParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricParser.m; sourceTree = "<group>"; };
 		20849B8016F06BA9001F2A8D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		20C98A12170D5102008194BF /* Come Away With Me - Norah Jones.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Come Away With Me - Norah Jones.mp3"; sourceTree = "<group>"; };
-		20C98A13170D5102008194BF /* come_away_with_me_NOTES.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = come_away_with_me_NOTES.rtf; sourceTree = "<group>"; };
-		20C98A14170D5102008194BF /* come_away_with_me_vox.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = come_away_with_me_vox.wav; sourceTree = "<group>"; };
-		20C98A16170D5102008194BF /* come_away_with_me_01.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = come_away_with_me_01.lrc; sourceTree = "<group>"; };
-		20C98A17170D5102008194BF /* come_away_with_me_02.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = come_away_with_me_02.lrc; sourceTree = "<group>"; };
-		20C98A18170D5102008194BF /* come_away_with_me_03.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = come_away_with_me_03.lrc; sourceTree = "<group>"; };
-		20C98A19170D5102008194BF /* come_away_with_me_04.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = come_away_with_me_04.lrc; sourceTree = "<group>"; };
-		20C98A1A170D5102008194BF /* come_away_with_me_05.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = come_away_with_me_05.lrc; sourceTree = "<group>"; };
-		20C98A1B170D5102008194BF /* come_away_with_me_06.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = come_away_with_me_06.lrc; sourceTree = "<group>"; };
-		20C98A1D170D5102008194BF /* come_away_with_me_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = come_away_with_me_01.wav; sourceTree = "<group>"; };
-		20C98A1E170D5102008194BF /* come_away_with_me_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = come_away_with_me_02.wav; sourceTree = "<group>"; };
-		20C98A1F170D5102008194BF /* come_away_with_me_03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = come_away_with_me_03.wav; sourceTree = "<group>"; };
-		20C98A20170D5102008194BF /* come_away_with_me_04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = come_away_with_me_04.wav; sourceTree = "<group>"; };
-		20C98A21170D5102008194BF /* come_away_with_me_05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = come_away_with_me_05.wav; sourceTree = "<group>"; };
-		20C98A22170D5102008194BF /* come_away_with_me_06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = come_away_with_me_06.wav; sourceTree = "<group>"; };
+		209D6D231720090100E26ACF /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		209D6D241720090100E26ACF /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		209D6D251720090100E26ACF /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		209D6D261720090100E26ACF /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		209D6D271720090100E26ACF /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		209D6D281720090100E26ACF /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		209D6D291720090100E26ACF /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		209D6D2A1720090100E26ACF /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		209D6D2B1720090100E26ACF /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		209D6D2C1720090100E26ACF /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		209D6D2D1720090100E26ACF /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		20F9A5B3156D363200ED44D7 /* NSMutableArray+Reverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Reverse.h"; sourceTree = "<group>"; };
 		20F9A5B4156D363200ED44D7 /* NSMutableArray+Reverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Reverse.m"; sourceTree = "<group>"; };
 		20F9A5BC156D3BAB00ED44D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20007CF7171D312F008B16B8 /* QuartzCore.framework in Frameworks */,
+				20007CF5171D310B008B16B8 /* CoreText.framework in Frameworks */,
 				20F9A5BE156D3BAB00ED44D7 /* AVFoundation.framework in Frameworks */,
 				20FB3CD81567EFA500F4AC61 /* UIKit.framework in Frameworks */,
 				20FB3CDA1567EFA500F4AC61 /* Foundation.framework in Frameworks */,
@@ -100,48 +138,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20C98A11170D5102008194BF /* come away with me */ = {
+		20007CED171D2F79008B16B8 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				20C98A12170D5102008194BF /* Come Away With Me - Norah Jones.mp3 */,
-				20C98A13170D5102008194BF /* come_away_with_me_NOTES.rtf */,
-				20C98A14170D5102008194BF /* come_away_with_me_vox.wav */,
-				20C98A15170D5102008194BF /* LRC */,
-				20C98A1C170D5102008194BF /* WAV */,
+				20007CEE171D2F79008B16B8 /* AUIAnimatableLabel.h */,
+				20007CEF171D2F79008B16B8 /* AUIAnimatableLabel.m */,
+				20007CF0171D2F79008B16B8 /* UIFont+CoreTextExtensions.h */,
+				20007CF1171D2F79008B16B8 /* UIFont+CoreTextExtensions.m */,
 			);
-			name = "come away with me";
-			path = "../../../../Dropbox/song_processing/come away with me";
+			path = Library;
 			sourceTree = "<group>";
 		};
-		20C98A15170D5102008194BF /* LRC */ = {
+		20007CF8171D5068008B16B8 /* Just Dance */ = {
 			isa = PBXGroup;
 			children = (
-				20C98A16170D5102008194BF /* come_away_with_me_01.lrc */,
-				20C98A17170D5102008194BF /* come_away_with_me_02.lrc */,
-				20C98A18170D5102008194BF /* come_away_with_me_03.lrc */,
-				20C98A19170D5102008194BF /* come_away_with_me_04.lrc */,
-				20C98A1A170D5102008194BF /* come_away_with_me_05.lrc */,
-				20C98A1B170D5102008194BF /* come_away_with_me_06.lrc */,
+				20007CF9171D5068008B16B8 /* JustDance_01.wav */,
+				20007CFA171D5068008B16B8 /* JustDance_02.wav */,
+				20007CFB171D5068008B16B8 /* JustDance_03.wav */,
+				20007CFC171D5068008B16B8 /* JustDance_04.wav */,
+				20007CFD171D5068008B16B8 /* JustDance_05.wav */,
+				20007CFE171D5068008B16B8 /* JustDance_06.wav */,
+				20007CFF171D5068008B16B8 /* JustDance_07.wav */,
+				20007D00171D5068008B16B8 /* JustDance_08.wav */,
+				20007D01171D5068008B16B8 /* JustDance_notes.rtf */,
+				20007D02171D5068008B16B8 /* lyrics */,
 			);
-			path = LRC;
+			name = "Just Dance";
+			path = "../../../../Dropbox/song_processing/Just Dance";
 			sourceTree = "<group>";
 		};
-		20C98A1C170D5102008194BF /* WAV */ = {
+		20007D02171D5068008B16B8 /* lyrics */ = {
 			isa = PBXGroup;
 			children = (
-				20C98A1D170D5102008194BF /* come_away_with_me_01.wav */,
-				20C98A1E170D5102008194BF /* come_away_with_me_02.wav */,
-				20C98A1F170D5102008194BF /* come_away_with_me_03.wav */,
-				20C98A20170D5102008194BF /* come_away_with_me_04.wav */,
-				20C98A21170D5102008194BF /* come_away_with_me_05.wav */,
-				20C98A22170D5102008194BF /* come_away_with_me_06.wav */,
+				20007D03171D5068008B16B8 /* JustDance_01.lrc */,
+				20007D04171D5068008B16B8 /* JustDance_02.lrc */,
+				20007D05171D5068008B16B8 /* JustDance_03.lrc */,
+				20007D06171D5068008B16B8 /* JustDance_04.lrc */,
+				20007D07171D5068008B16B8 /* JustDance_05.lrc */,
+				20007D08171D5068008B16B8 /* JustDance_06.lrc */,
+				20007D09171D5068008B16B8 /* JustDance_07.lrc */,
+				20007D0A171D5068008B16B8 /* JustDance_08.lrc */,
 			);
-			path = WAV;
+			path = lyrics;
+			sourceTree = "<group>";
+		};
+		209D6D221720090100E26ACF /* Lato */ = {
+			isa = PBXGroup;
+			children = (
+				209D6D231720090100E26ACF /* Lato-Black.ttf */,
+				209D6D241720090100E26ACF /* Lato-BlackItalic.ttf */,
+				209D6D251720090100E26ACF /* Lato-Bold.ttf */,
+				209D6D261720090100E26ACF /* Lato-BoldItalic.ttf */,
+				209D6D271720090100E26ACF /* Lato-Hairline.ttf */,
+				209D6D281720090100E26ACF /* Lato-HairlineItalic.ttf */,
+				209D6D291720090100E26ACF /* Lato-Italic.ttf */,
+				209D6D2A1720090100E26ACF /* Lato-Light.ttf */,
+				209D6D2B1720090100E26ACF /* Lato-LightItalic.ttf */,
+				209D6D2C1720090100E26ACF /* Lato-Regular.ttf */,
+				209D6D2D1720090100E26ACF /* OFL.txt */,
+			);
+			path = Lato;
 			sourceTree = "<group>";
 		};
 		20FB3CC81567EFA500F4AC61 = {
 			isa = PBXGroup;
 			children = (
+				20007CF6171D312F008B16B8 /* QuartzCore.framework */,
+				20007CF4171D310A008B16B8 /* CoreText.framework */,
 				20849B8016F06BA9001F2A8D /* Default-568h@2x.png */,
 				20F9A5BC156D3BAB00ED44D7 /* AVFoundation.framework */,
 				20FB3CDD1567EFA500F4AC61 /* LyricView */,
@@ -171,7 +234,9 @@
 		20FB3CDD1567EFA500F4AC61 /* LyricView */ = {
 			isa = PBXGroup;
 			children = (
-				20C98A11170D5102008194BF /* come away with me */,
+				209D6D221720090100E26ACF /* Lato */,
+				20007CF8171D5068008B16B8 /* Just Dance */,
+				20007CED171D2F79008B16B8 /* Library */,
 				204F73811647AC1700D47794 /* Futura LT Book.ttf */,
 				204F73821647AC1700D47794 /* Futura LT Bold.ttf */,
 				204F73891647C80E00D47794 /* 2142.mp3 */,
@@ -262,21 +327,34 @@
 				204F738C1647C80E00D47794 /* 2142.lrc in Resources */,
 				207F898D16539B2D00FFF1A9 /* test.lrc in Resources */,
 				20849B8116F06BA9001F2A8D /* Default-568h@2x.png in Resources */,
-				20C98A23170D5102008194BF /* Come Away With Me - Norah Jones.mp3 in Resources */,
-				20C98A24170D5102008194BF /* come_away_with_me_NOTES.rtf in Resources */,
-				20C98A25170D5102008194BF /* come_away_with_me_vox.wav in Resources */,
-				20C98A26170D5102008194BF /* come_away_with_me_01.lrc in Resources */,
-				20C98A27170D5102008194BF /* come_away_with_me_02.lrc in Resources */,
-				20C98A28170D5102008194BF /* come_away_with_me_03.lrc in Resources */,
-				20C98A29170D5102008194BF /* come_away_with_me_04.lrc in Resources */,
-				20C98A2A170D5102008194BF /* come_away_with_me_05.lrc in Resources */,
-				20C98A2B170D5102008194BF /* come_away_with_me_06.lrc in Resources */,
-				20C98A2C170D5102008194BF /* come_away_with_me_01.wav in Resources */,
-				20C98A2D170D5102008194BF /* come_away_with_me_02.wav in Resources */,
-				20C98A2E170D5102008194BF /* come_away_with_me_03.wav in Resources */,
-				20C98A2F170D5102008194BF /* come_away_with_me_04.wav in Resources */,
-				20C98A30170D5102008194BF /* come_away_with_me_05.wav in Resources */,
-				20C98A31170D5102008194BF /* come_away_with_me_06.wav in Resources */,
+				20007D0B171D5068008B16B8 /* JustDance_01.wav in Resources */,
+				20007D0C171D5068008B16B8 /* JustDance_02.wav in Resources */,
+				20007D0D171D5068008B16B8 /* JustDance_03.wav in Resources */,
+				20007D0E171D5068008B16B8 /* JustDance_04.wav in Resources */,
+				20007D0F171D5068008B16B8 /* JustDance_05.wav in Resources */,
+				20007D10171D5068008B16B8 /* JustDance_06.wav in Resources */,
+				20007D11171D5068008B16B8 /* JustDance_07.wav in Resources */,
+				20007D12171D5068008B16B8 /* JustDance_08.wav in Resources */,
+				20007D13171D5068008B16B8 /* JustDance_notes.rtf in Resources */,
+				20007D14171D5068008B16B8 /* JustDance_01.lrc in Resources */,
+				20007D15171D5068008B16B8 /* JustDance_02.lrc in Resources */,
+				20007D16171D5068008B16B8 /* JustDance_03.lrc in Resources */,
+				20007D17171D5068008B16B8 /* JustDance_04.lrc in Resources */,
+				20007D18171D5068008B16B8 /* JustDance_05.lrc in Resources */,
+				20007D19171D5068008B16B8 /* JustDance_06.lrc in Resources */,
+				20007D1A171D5068008B16B8 /* JustDance_07.lrc in Resources */,
+				20007D1B171D5068008B16B8 /* JustDance_08.lrc in Resources */,
+				209D6D2E1720090100E26ACF /* Lato-Black.ttf in Resources */,
+				209D6D2F1720090100E26ACF /* Lato-BlackItalic.ttf in Resources */,
+				209D6D301720090100E26ACF /* Lato-Bold.ttf in Resources */,
+				209D6D311720090100E26ACF /* Lato-BoldItalic.ttf in Resources */,
+				209D6D321720090100E26ACF /* Lato-Hairline.ttf in Resources */,
+				209D6D331720090100E26ACF /* Lato-HairlineItalic.ttf in Resources */,
+				209D6D341720090100E26ACF /* Lato-Italic.ttf in Resources */,
+				209D6D351720090100E26ACF /* Lato-Light.ttf in Resources */,
+				209D6D361720090100E26ACF /* Lato-LightItalic.ttf in Resources */,
+				209D6D371720090100E26ACF /* Lato-Regular.ttf in Resources */,
+				209D6D381720090100E26ACF /* OFL.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +370,8 @@
 				20FB3CEB1567EFA500F4AC61 /* ViewController.m in Sources */,
 				208166131568C4F800D288D7 /* LyricParser.m in Sources */,
 				20F9A5B5156D363200ED44D7 /* NSMutableArray+Reverse.m in Sources */,
+				20007CF2171D2F79008B16B8 /* AUIAnimatableLabel.m in Sources */,
+				20007CF3171D2F79008B16B8 /* UIFont+CoreTextExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

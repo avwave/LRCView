@@ -9,11 +9,27 @@
 #import "LyricParser.h"
 #define FONTSIZE 25.0
 #define kLyricFontRef "Futura LT Book"
+#define kLyricFont @"Lato-Regular"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation LyricParser {
 	BOOL specialCase;
+	NSString *displayString;
+
+	NSString *wholeLyrics;
+	UILabel *animLabel;
+	UILabel *upNextAnimLabel;
+
+	CGRect prevFrame;
+	CGRect upNextPrevFrame;
 }
 @synthesize delegate, timerArray, startTimeInSeconds, endTimeInSeconds;
+
+-(void) invalidateTimers {
+	for (NSTimer *timer in self.timerArray) {
+		[timer invalidate];
+	}
+}
 
 -(void)clearStrings {
 	for (int i=0; i < [progressLineArray count] ; i++) {
@@ -22,6 +38,9 @@
 
 	currentWord = @"";
 	currentLine = @"";
+	wholeLyrics = @"\n";
+	displayString = @"\n";
+	animLabel.text = @"";
 
 	if (specialCase) {
 		displayLine = 0;
@@ -29,12 +48,6 @@
 		displayLine = 1;
 	}
 }
--(void) invalidateTimers {
-	for (NSTimer *timer in self.timerArray) {
-		[timer invalidate];
-	}
-}
-
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -50,64 +63,56 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
     if (self) {
+		animLabel = [[UILabel alloc] init];
+		upNextAnimLabel = [[UILabel alloc] init];
+
+		animLabel.backgroundColor = [UIColor clearColor];
+		upNextAnimLabel.backgroundColor = [UIColor clearColor];
+
+
+		animLabel.lineBreakMode = UILineBreakModeWordWrap;
+		animLabel.numberOfLines = 100;
+		upNextAnimLabel.lineBreakMode = UILineBreakModeWordWrap;
+		upNextAnimLabel.numberOfLines = 100;
+		animLabel.font = [UIFont fontWithName:kLyricFont size:FONTSIZE];
+		animLabel.textColor = [UIColor magentaColor];
+		upNextAnimLabel.textColor = [UIColor whiteColor];
+		upNextAnimLabel.font = [UIFont fontWithName:kLyricFont size:FONTSIZE];
+
+		self.clipsToBounds = YES;
+		[self addSubview:upNextAnimLabel];
+		[self addSubview:animLabel];
+
+		animLabel.frame = self.bounds;
+		upNextAnimLabel.frame = self.bounds;
+
+		animLabel.text = @"";
+		upNextAnimLabel.text = @"\n";
+		displayString = @"";
+
 		displayLine = 1;
 		dispLineArray = [[NSMutableArray alloc] init];
-		progressLineArray = [[NSMutableArray alloc] initWithCapacity:10];
+		progressLineArray = [[NSMutableArray alloc] init];
 		[self clearStrings];
     }
     return self;
 }
 
--(void)drawRect:(CGRect)rect {
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	CGContextTranslateCTM(context, 0.0, rect.size.height);
-	CGContextScaleCTM(context, 1.0, -1.0);
-
-	float offset = 25;
-	float spacing = 30;
-
-	int linecount = 6;
-
-	if  ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) &&
-		 ([UIScreen mainScreen].bounds.size.height > 480.0f)) {
-		linecount = 9;
-		spacing = 31;
-	}
-
-	int totallinecount = [dispLineArray count] > linecount ? linecount : [dispLineArray count];
-	for (int i = 0; i <totallinecount; i++) {
-		CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
-		CGContextSelectFont(context, kLyricFontRef, FONTSIZE, kCGEncodingMacRoman);
-
-		CGContextSetTextPosition(context, 0, (200+offset) - (i*spacing));
-		CGContextShowText(context, [[dispLineArray objectAtIndex:i] UTF8String], strlen([[dispLineArray objectAtIndex:i] UTF8String]));
-	}
-
-	for (int i = 0; i <[progressLineArray count]; i++) {
-		CGContextSetFillColorWithColor(context, [UIColor magentaColor].CGColor);
-		CGContextSelectFont(context, kLyricFontRef, FONTSIZE, kCGEncodingMacRoman);
-
-		CGContextSetTextPosition(context, 0, (200+offset) - (i*spacing));
-		CGContextShowText(context, [[progressLineArray objectAtIndex:i] UTF8String], strlen([[progressLineArray objectAtIndex:i] UTF8String]));
-	}
-
-}
 
 -(void)setLyrics:(NSString *)l {
 	lyrics = [NSString stringWithString:l];
 	lineTimes = [[NSMutableArray alloc] initWithCapacity:1];
 	lineContents = [[NSMutableArray alloc] initWithCapacity:1];
 	lineQueue = [[NSMutableArray alloc] initWithCapacity:1];
+	displayString = @"";
 	[self parseLyrics];
 
-	[NSTimer scheduledTimerWithTimeInterval:0.0f target:self selector:@selector(redraw) userInfo:nil repeats:YES];
-}
-
--(void)redraw {
-	[self setNeedsDisplay];
 }
 
 -(void)parseLyrics{
+	animLabel.frame = self.bounds;
+	upNextAnimLabel.frame = self.bounds;
+
 	NSArray *lineSplit = [lyrics componentsSeparatedByCharactersInSet:
 						  [NSCharacterSet characterSetWithCharactersInString:@"[]"]];
 
@@ -151,7 +156,15 @@
 					[tmpLineArr addObject:[[wordSplit objectAtIndex:j+1] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
 				}
 			}
+
+			NSString *terminalString = [wordContents lastObject];
+			[wordContents removeLastObject];
+			terminalString = [terminalString stringByAppendingString:@"\n"];
+			[wordContents addObject:terminalString];
+
+
 			[lineContents addObject: [NSString stringWithFormat:@"^^%@", [tmpLineArr componentsJoinedByString:@""]]];
+			wholeLyrics = [wholeLyrics stringByAppendingString:[NSString stringWithFormat:@"%@\n", [tmpLineArr componentsJoinedByString:@""]]];
 
 			[lineQueue addObject: [tmpLineArr componentsJoinedByString:@""]];
 
@@ -163,6 +176,7 @@
 
 	if ([lineTimes count] > 0) {
 		[self.delegate countdownStart:[[lineTimes objectAtIndex:1] floatValue]];
+		[self displayUpNextStringIntoLabel:wholeLyrics];
 	}
 
 }
@@ -170,13 +184,6 @@
 -(void)instantiateLyricFromLine:(int)startLine ToLine:(int)endLine {
 	specialCase = YES;
 	[self clearStrings];
-
-	dispLineArray = [[NSMutableArray alloc] initWithArray:lineQueue];
-
-	progressLineArray = [[NSMutableArray alloc] initWithArray:lineQueue];
-
-	[self clearStrings];
-
 	//DLog(@"Lyrics: %@", dispLineArray);
 }
 
@@ -191,7 +198,14 @@
 		if ([[lineTimes objectAtIndex:i] floatValue] > startTimeInSeconds) {
 			//DLog(@"%f, %@", [[lineTimes objectAtIndex:i] floatValue], [lineContents objectAtIndex:i]);
 
-			NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:[lineContents objectAtIndex:i], @"line", nil];
+			float lineTimeOffset = 0;
+			if (i+1 <[lineTimes count]) {
+				lineTimeOffset = [lineTimes[i + 1] floatValue] - [lineTimes[i] floatValue];
+			}
+			NSDictionary *dict = @{
+						  @"line": lineContents[i],
+		@"time":[NSNumber numberWithFloat:lineTimeOffset]
+		};
 			NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:([[lineTimes objectAtIndex:i] floatValue] - startTimeInSeconds - secondOverlay) target:self selector:@selector(timerComplete:) userInfo:dict repeats:NO];
 			[self.timerArray addObject:timer];
 			//[self performSelector:@selector(timerComplete:) withObject:[lineContents objectAtIndex:i] afterDelay:[[lineTimes objectAtIndex:i] floatValue] - timeInSeconds - secondOverlay];
@@ -201,42 +215,22 @@
 	[self clearStrings];
 
 }
-- (void)timerComplete:(NSTimer *)timer {
-    NSDictionary *dict = [timer userInfo];
 
-	NSString *string = [dict objectForKey:@"line"];
-	DLog(@"lyrline: '%@'", string);
+
+-(void)timerComplete:(NSTimer *)timer {
+	NSDictionary *dict = [timer userInfo];
+	NSString *string = dict[@"line"];
+
+	//	DLog(@"lyrline: '%@'", string);
 	if (string == nil) {
 		return;
 	}
-
-	NSString *line;
 	if ([string hasPrefix:@"^^"]) {
-		line = [string stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"^"]];
-		if ([line length] > 0) {
-			displayLine ++;
-		} else {
-			displayLine = 0;
-		}
-
-		if (displayLine > 3) {
-			[dispLineArray removeObjectAtIndex:0];  //pop line
-			[dispLineArray removeObjectAtIndex:0];
-
-			[progressLineArray removeObjectAtIndex:0];
-			[progressLineArray removeObjectAtIndex:0];
-
-			displayLine = 2;
-		}
-		currentWord = @"";
-
-
+		//		[self displayStringIntoLabel:@"\n" withDuration:[dict[@"time"] floatValue]];
 	} else {
-		currentWord = [[NSString stringWithFormat:@"%@%@", currentWord, string]stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-
-		[progressLineArray replaceObjectAtIndex:displayLine - 1 withObject:currentWord];
+		[self displayStringIntoLabel:string withDuration:[dict[@"time"] floatValue]];
 	}
-	[self setNeedsDisplay];
+
 }
 
 -(NSString *)nextLine {
@@ -248,6 +242,83 @@
 
 -(void)startLineEngine {
 
+}
+
+-(void)displayStringIntoLabel:(NSString *)component withDuration:(NSTimeInterval)time {
+	if([component isEqualToString:@"\n"] && [[displayString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]] isEqualToString:@""]) {
+		component = @"";
+	}
+	displayString = [displayString stringByAppendingString:component];
+
+	CATransition *animation = [CATransition animation];
+	animation.delegate = self;
+	if (time > 0.25) {
+		animation.duration = 0.2;
+	} else {
+		animation.duration = time/2;
+	}
+	animation.type = kCATransitionFade;
+	animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+	[animLabel.layer addAnimation:animation forKey:@"changeTextTransition"];
+
+	// Change the text
+	if  ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) &&
+		 ([UIScreen mainScreen].bounds.size.height > 480.0f)) {
+		if (self.isLessLines) {
+			animLabel.text = [displayString stringByAppendingString:@"\n\n\n\n\n\n\n\n"];
+		} else {
+			animLabel.text = [displayString stringByAppendingString:@"\n\n\n\n\n\n\n\n\n"];
+		}
+	} else {
+		if (self.isLessLines) {
+			animLabel.text = [displayString stringByAppendingString:@"\n\n\n\n\n"];
+		} else {
+			animLabel.text = [displayString stringByAppendingString:@"\n\n\n\n\n\n"];
+		}
+	}
+
+
+	[animLabel sizeToFit];
+	CGRect rect = animLabel.frame;
+	rect.size.width = 265;
+	animLabel.frame = rect;
+}
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+	[self shiftUp];
+}
+
+-(void)shiftUp{
+	if (CGRectEqualToRect(prevFrame, animLabel.frame)) {
+		return;
+	}
+
+	if (animLabel.bounds.size.height > animLabel.superview.bounds.size.height) {
+		float heightOffset = animLabel.bounds.size.height - animLabel.superview.bounds.size.height;
+		float topOffset = animLabel.frame.origin.y;
+		float totalOffset = (heightOffset - (fabsf(topOffset))) + 5.0;
+		CGRect frame = CGRectOffset(animLabel.frame, 0, -totalOffset);
+		CGRect upNextFrame = CGRectOffset(upNextAnimLabel.frame, 0, -totalOffset);
+
+		[UIView animateWithDuration:0.3f
+							  delay:0.0f
+							options:UIViewAnimationOptionCurveEaseOut
+						 animations:^{
+							 animLabel.frame = frame;
+							 upNextAnimLabel.frame = upNextFrame;
+						 }
+						 completion:nil];
+		prevFrame = frame;
+	}
+}
+
+
+-(void)displayUpNextStringIntoLabel:(NSString *)component{
+	upNextAnimLabel.text = component;
+	[upNextAnimLabel sizeToFit];
+
+	CGRect rect = upNextAnimLabel.frame;
+	rect.size.width = 265;
+	upNextAnimLabel.frame = rect;
 }
 
 @end
