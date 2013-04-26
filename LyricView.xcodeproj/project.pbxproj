@@ -11,23 +11,6 @@
 		20007CF3171D2F79008B16B8 /* UIFont+CoreTextExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20007CF1171D2F79008B16B8 /* UIFont+CoreTextExtensions.m */; };
 		20007CF5171D310B008B16B8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20007CF4171D310A008B16B8 /* CoreText.framework */; };
 		20007CF7171D312F008B16B8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20007CF6171D312F008B16B8 /* QuartzCore.framework */; };
-		20007D0B171D5068008B16B8 /* JustDance_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CF9171D5068008B16B8 /* JustDance_01.wav */; };
-		20007D0C171D5068008B16B8 /* JustDance_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFA171D5068008B16B8 /* JustDance_02.wav */; };
-		20007D0D171D5068008B16B8 /* JustDance_03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFB171D5068008B16B8 /* JustDance_03.wav */; };
-		20007D0E171D5068008B16B8 /* JustDance_04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFC171D5068008B16B8 /* JustDance_04.wav */; };
-		20007D0F171D5068008B16B8 /* JustDance_05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFD171D5068008B16B8 /* JustDance_05.wav */; };
-		20007D10171D5068008B16B8 /* JustDance_06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFE171D5068008B16B8 /* JustDance_06.wav */; };
-		20007D11171D5068008B16B8 /* JustDance_07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007CFF171D5068008B16B8 /* JustDance_07.wav */; };
-		20007D12171D5068008B16B8 /* JustDance_08.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20007D00171D5068008B16B8 /* JustDance_08.wav */; };
-		20007D13171D5068008B16B8 /* JustDance_notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 20007D01171D5068008B16B8 /* JustDance_notes.rtf */; };
-		20007D14171D5068008B16B8 /* JustDance_01.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D03171D5068008B16B8 /* JustDance_01.lrc */; };
-		20007D15171D5068008B16B8 /* JustDance_02.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D04171D5068008B16B8 /* JustDance_02.lrc */; };
-		20007D16171D5068008B16B8 /* JustDance_03.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D05171D5068008B16B8 /* JustDance_03.lrc */; };
-		20007D17171D5068008B16B8 /* JustDance_04.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D06171D5068008B16B8 /* JustDance_04.lrc */; };
-		20007D18171D5068008B16B8 /* JustDance_05.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D07171D5068008B16B8 /* JustDance_05.lrc */; };
-		20007D19171D5068008B16B8 /* JustDance_06.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D08171D5068008B16B8 /* JustDance_06.lrc */; };
-		20007D1A171D5068008B16B8 /* JustDance_07.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D09171D5068008B16B8 /* JustDance_07.lrc */; };
-		20007D1B171D5068008B16B8 /* JustDance_08.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 20007D0A171D5068008B16B8 /* JustDance_08.lrc */; };
 		204F73831647AC1800D47794 /* Futura LT Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204F73811647AC1700D47794 /* Futura LT Book.ttf */; };
 		204F73841647AC1800D47794 /* Futura LT Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204F73821647AC1700D47794 /* Futura LT Bold.ttf */; };
 		204F738B1647C80E00D47794 /* 2142.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 204F73891647C80E00D47794 /* 2142.mp3 */; };
@@ -66,23 +49,6 @@
 		20007CF1171D2F79008B16B8 /* UIFont+CoreTextExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CoreTextExtensions.m"; sourceTree = "<group>"; };
 		20007CF4171D310A008B16B8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		20007CF6171D312F008B16B8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		20007CF9171D5068008B16B8 /* JustDance_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_01.wav; sourceTree = "<group>"; };
-		20007CFA171D5068008B16B8 /* JustDance_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_02.wav; sourceTree = "<group>"; };
-		20007CFB171D5068008B16B8 /* JustDance_03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_03.wav; sourceTree = "<group>"; };
-		20007CFC171D5068008B16B8 /* JustDance_04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_04.wav; sourceTree = "<group>"; };
-		20007CFD171D5068008B16B8 /* JustDance_05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_05.wav; sourceTree = "<group>"; };
-		20007CFE171D5068008B16B8 /* JustDance_06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_06.wav; sourceTree = "<group>"; };
-		20007CFF171D5068008B16B8 /* JustDance_07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_07.wav; sourceTree = "<group>"; };
-		20007D00171D5068008B16B8 /* JustDance_08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = JustDance_08.wav; sourceTree = "<group>"; };
-		20007D01171D5068008B16B8 /* JustDance_notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = JustDance_notes.rtf; sourceTree = "<group>"; };
-		20007D03171D5068008B16B8 /* JustDance_01.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_01.lrc; sourceTree = "<group>"; };
-		20007D04171D5068008B16B8 /* JustDance_02.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_02.lrc; sourceTree = "<group>"; };
-		20007D05171D5068008B16B8 /* JustDance_03.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_03.lrc; sourceTree = "<group>"; };
-		20007D06171D5068008B16B8 /* JustDance_04.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_04.lrc; sourceTree = "<group>"; };
-		20007D07171D5068008B16B8 /* JustDance_05.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_05.lrc; sourceTree = "<group>"; };
-		20007D08171D5068008B16B8 /* JustDance_06.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_06.lrc; sourceTree = "<group>"; };
-		20007D09171D5068008B16B8 /* JustDance_07.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_07.lrc; sourceTree = "<group>"; };
-		20007D0A171D5068008B16B8 /* JustDance_08.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JustDance_08.lrc; sourceTree = "<group>"; };
 		204F73811647AC1700D47794 /* Futura LT Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Book.ttf"; sourceTree = "<group>"; };
 		204F73821647AC1700D47794 /* Futura LT Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Bold.ttf"; sourceTree = "<group>"; };
 		204F73891647C80E00D47794 /* 2142.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 2142.mp3; path = ../../../../Downloads/2142.mp3; sourceTree = "<group>"; };
@@ -149,39 +115,6 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		20007CF8171D5068008B16B8 /* Just Dance */ = {
-			isa = PBXGroup;
-			children = (
-				20007CF9171D5068008B16B8 /* JustDance_01.wav */,
-				20007CFA171D5068008B16B8 /* JustDance_02.wav */,
-				20007CFB171D5068008B16B8 /* JustDance_03.wav */,
-				20007CFC171D5068008B16B8 /* JustDance_04.wav */,
-				20007CFD171D5068008B16B8 /* JustDance_05.wav */,
-				20007CFE171D5068008B16B8 /* JustDance_06.wav */,
-				20007CFF171D5068008B16B8 /* JustDance_07.wav */,
-				20007D00171D5068008B16B8 /* JustDance_08.wav */,
-				20007D01171D5068008B16B8 /* JustDance_notes.rtf */,
-				20007D02171D5068008B16B8 /* lyrics */,
-			);
-			name = "Just Dance";
-			path = "../../../../Dropbox/song_processing/Just Dance";
-			sourceTree = "<group>";
-		};
-		20007D02171D5068008B16B8 /* lyrics */ = {
-			isa = PBXGroup;
-			children = (
-				20007D03171D5068008B16B8 /* JustDance_01.lrc */,
-				20007D04171D5068008B16B8 /* JustDance_02.lrc */,
-				20007D05171D5068008B16B8 /* JustDance_03.lrc */,
-				20007D06171D5068008B16B8 /* JustDance_04.lrc */,
-				20007D07171D5068008B16B8 /* JustDance_05.lrc */,
-				20007D08171D5068008B16B8 /* JustDance_06.lrc */,
-				20007D09171D5068008B16B8 /* JustDance_07.lrc */,
-				20007D0A171D5068008B16B8 /* JustDance_08.lrc */,
-			);
-			path = lyrics;
-			sourceTree = "<group>";
-		};
 		209D6D221720090100E26ACF /* Lato */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				209D6D221720090100E26ACF /* Lato */,
-				20007CF8171D5068008B16B8 /* Just Dance */,
 				20007CED171D2F79008B16B8 /* Library */,
 				204F73811647AC1700D47794 /* Futura LT Book.ttf */,
 				204F73821647AC1700D47794 /* Futura LT Bold.ttf */,
@@ -294,7 +226,7 @@
 		20FB3CCA1567EFA500F4AC61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 20FB3CCD1567EFA500F4AC61 /* Build configuration list for PBXProject "LyricView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -327,23 +259,6 @@
 				204F738C1647C80E00D47794 /* 2142.lrc in Resources */,
 				207F898D16539B2D00FFF1A9 /* test.lrc in Resources */,
 				20849B8116F06BA9001F2A8D /* Default-568h@2x.png in Resources */,
-				20007D0B171D5068008B16B8 /* JustDance_01.wav in Resources */,
-				20007D0C171D5068008B16B8 /* JustDance_02.wav in Resources */,
-				20007D0D171D5068008B16B8 /* JustDance_03.wav in Resources */,
-				20007D0E171D5068008B16B8 /* JustDance_04.wav in Resources */,
-				20007D0F171D5068008B16B8 /* JustDance_05.wav in Resources */,
-				20007D10171D5068008B16B8 /* JustDance_06.wav in Resources */,
-				20007D11171D5068008B16B8 /* JustDance_07.wav in Resources */,
-				20007D12171D5068008B16B8 /* JustDance_08.wav in Resources */,
-				20007D13171D5068008B16B8 /* JustDance_notes.rtf in Resources */,
-				20007D14171D5068008B16B8 /* JustDance_01.lrc in Resources */,
-				20007D15171D5068008B16B8 /* JustDance_02.lrc in Resources */,
-				20007D16171D5068008B16B8 /* JustDance_03.lrc in Resources */,
-				20007D17171D5068008B16B8 /* JustDance_04.lrc in Resources */,
-				20007D18171D5068008B16B8 /* JustDance_05.lrc in Resources */,
-				20007D19171D5068008B16B8 /* JustDance_06.lrc in Resources */,
-				20007D1A171D5068008B16B8 /* JustDance_07.lrc in Resources */,
-				20007D1B171D5068008B16B8 /* JustDance_08.lrc in Resources */,
 				209D6D2E1720090100E26ACF /* Lato-Black.ttf in Resources */,
 				209D6D2F1720090100E26ACF /* Lato-BlackItalic.ttf in Resources */,
 				209D6D301720090100E26ACF /* Lato-Bold.ttf in Resources */,
@@ -403,6 +318,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -428,6 +347,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

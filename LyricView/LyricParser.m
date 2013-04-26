@@ -9,7 +9,7 @@
 #import "LyricParser.h"
 #define FONTSIZE 25.0
 #define kLyricFontRef "Futura LT Book"
-#define kLyricFont @"Lato-Regular"
+#define kLyricFont @"Lato-Bold"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation LyricParser {
